@@ -46,10 +46,6 @@ const props = defineProps({
     type: Number,
     default: 60
   },
-  mapHeight: {
-    type: Number,
-    default: null   // null 表示横屏模式，不使用高度
-  },
   selectedPerson: String,
   biographyContent: Object,
   showRoute: {
@@ -345,19 +341,19 @@ defineExpose({
 
 <style scoped>
 .map-container {
-  width: v-bind(mapHeight ? '100%' : mapWidth + '%');
-  height: v-bind(mapHeight ? mapHeight + '%' : '100%');
+  width: v-bind(mapWidth + '%');
   position: relative;
   z-index: 1;
-  box-shadow: v-bind(mapHeight ? '0 4px 20px var(--shadow)' : '4px 0 20px var(--shadow)');
-  min-height: unset;
+  box-shadow: 4px 0 20px var(--shadow);
+  min-height: 100vh;
+  height: 100%;
   flex-shrink: 0;
 }
 
 #map {
   width: 100%;
   height: 100%;
-  min-height: unset;
+  min-height: 100vh;
   background: #e8dcc4;
 }
 
