@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-wei: #4a5568;
+  --color-shu: #c53030;
+  --color-wu: #2c5282;
+  --color-neutral: #a0aec0;
+  --bg-paper: #f7f3e9;
+  --bg-dark: #2d3748;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --border-color: #d4c5a9;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Noto Serif SC', serif;
+  background: var(--bg-paper);
+  color: var(--text-primary);
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 装饰性纹样背景 */
+#app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(197, 48, 48, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(44, 82, 130, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(74, 85, 104, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 移除Leaflet的乌克兰国旗 */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .text-container {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+  }
+  
+  .map-container {
+    height: 50vh;
+    border-right: none;
+    border-bottom: 3px solid var(--border-color);
+  }
+  
+  .text-container {
+    width: 100% !important;
+    height: 50vh;
+  }
+}

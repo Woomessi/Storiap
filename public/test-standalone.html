@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史图记 · 三国志 | Storiap - Records of the Three Kingdoms</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-wei: #4a5568;
+            --color-shu: #c53030;
+            --color-wu: #2c5282;
+            --color-neutral: #a0aec0;
+            --bg-paper: #f7f3e9;
+            --bg-dark: #2d3748;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --border-color: #d4c5a9;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: var(--bg-paper);
+            color: var(--text-primary);
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        /* 左侧地图区域 */
+        .map-container {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            border-right: 3px solid var(--border-color);
+            box-shadow: 4px 0 20px var(--shadow);
+            height: 100vh;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            background: #e8dcc4;
+        }
+
+        /* 移除Leaflet的归属信息 */
+        .leaflet-control-attribution {
+            display: none !important;
+        }
+
+        /* 右侧文本区域 */
+        .text-container {
+            width: 480px;
+            min-width: 480px;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to bottom, #f7f3e9 0%, #f0ebe0 100%);
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+        }
+
+        /* 顶部标题栏 */
+        .header {
+            padding: 24px 28px;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a202c 100%);
+            color: white;
+            border-bottom: 2px solid #d4af37;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 28px;
+            margin-bottom: 6px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 13px;
+            opacity: 0.85;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        /* 关于我们按钮 */
+        .about-btn {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .about-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-icon {
+            font-size: 14px;
+        }
+
+        .about-text {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* 关于我们页面 */
+        .about-page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, #f7f3e9 0%, #f0ebe0 100%);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .about-content-full {
+            padding: 40px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .close-about-btn {
+            position: sticky;
+            top: 20px;
+            float: right;
+            background: var(--bg-dark);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .close-about-btn:hover {
+            background: #1a202c;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-content-full h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--bg-dark);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .about-content-full h2:first-of-type {
+            margin-top: 20px;
+        }
+
+        .about-content-full p {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-size: 16px;
+            line-height: 1.8;
+            text-indent: 2em;
+        }
+
+        .about-content-full ul {
+            margin-bottom: 20px;
+            padding-left: 2.5em;
+        }
+
+        .about-content-full li {
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .about-content-full li strong {
+            color: var(--bg-dark);
+            font-weight: 600;
+        }
+
+        .about-content-full .version-info {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px dashed var(--border-color);
+            text-align: center;
+        }
+
+        .about-content-full .version-info p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-indent: 0;
+        }
+
+        /* 选择器区域 */
+        .selectors {
+            padding: 20px 28px;
+            background: rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+
+        .selector-group {
+            margin-bottom: 14px;
+        }
+
+        .selector-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .selector-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            background: white;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 14px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            border-color: #a0826d;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #8b7355;
+            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+        }
+
+        /* 内容区域 */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px 28px;
+        }
+
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content::-webkit-scrollbar-track {
+            background: rgba(212, 197, 169, 0.2);
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            background: rgba(139, 115, 85, 0.4);
+            border-radius: 4px;
+        }
+
+        .content::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 115, 85, 0.6);
+        }
+
+        /* 传记内容 */
+        .biography {
+            line-height: 1.9;
+            font-size: 15px;
+            color: var(--text-primary);
+        }
+
+        .biography-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--bg-dark);
+            letter-spacing: 2px;
+        }
+
+        .biography p {
+            margin-bottom: 16px;
+            text-indent: 2em;
+        }
+
+        /* 地名高亮 */
+        .place-name {
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 3px;
+            transition: all 0.25s ease;
+            font-weight: 600;
+        }
+
+        .place-name::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: currentColor;
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+
+        .place-name:hover {
+            background: rgba(139, 115, 85, 0.1);
+        }
+
+        .place-name:hover::after {
+            transform: scaleX(1);
+        }
+
+        .place-name.wei {
+            color: var(--color-wei);
+        }
+
+        .place-name.shu {
+            color: var(--color-shu);
+        }
+
+        .place-name.wu {
+            color: var(--color-wu);
+        }
+
+        /* 信息面板 */
+        .info-panel {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 18px 22px;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            border: 2px solid var(--border-color);
+            min-width: 240px;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .info-panel.hidden {
+            transform: translateY(120%);
+            opacity: 0;
+        }
+
+        .info-panel h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--bg-dark);
+            letter-spacing: 1px;
+        }
+
+        .info-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-right: 8px;
+            min-width: 60px;
+        }
+
+        .info-value {
+            color: var(--text-primary);
+        }
+
+        .faction-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .faction-badge.wei {
+            background: var(--color-wei);
+            color: white;
+        }
+
+        .faction-badge.shu {
+            background: var(--color-shu);
+            color: white;
+        }
+
+        .faction-badge.wu {
+            background: var(--color-wu);
+            color: white;
+        }
+
+        /* 自定义标记样式 */
+        .custom-marker {
+            width: 32px;
+            height: 32px;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .custom-marker:hover {
+            transform: rotate(-45deg) scale(1.2);
+        }
+
+        .custom-marker.wei {
+            background: var(--color-wei);
+        }
+
+        .custom-marker.shu {
+            background: var(--color-shu);
+        }
+
+        .custom-marker.wu {
+            background: var(--color-wu);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="info-panel hidden" id="infoPanel">
+                <h3 id="placeName">选择地点</h3>
+                <div class="info-item">
+                    <span class="info-label">时间：</span>
+                    <span class="info-value" id="placeYear">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">阵营：</span>
+                    <span class="faction-badge" id="placeFaction">-</span>
+                </div>
+                <div class="info-item" id="modernNameItem" style="display: none;">
+                    <span class="info-label">今名：</span>
+                    <span class="info-value" id="placeModernName"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-container">
+            <div class="header">
+                <h1>三國志地名志</h1>
+                <div class="subtitle">Records of the Three Kingdoms Places</div>
+                <button id="aboutBtn" class="about-btn">
+                    <span class="about-icon">ℹ️</span>
+                    <span class="about-text">关于我们</span>
+                </button>
+            </div>
+            
+            <!-- 关于我们页面（覆盖内容） -->
+            <div class="about-page" id="aboutPage" style="display: none;">
+                <div class="about-content-full">
+                    <button class="close-about-btn" id="closeAboutBtn">✕ 关闭</button>
+                    
+                    <h2>📖 项目介绍</h2>
+                    <p>
+                        三国志地名志是一个交互式历史地理学习平台，致力于将《三国志》中的历史地名与现代地图结合，
+                        为读者提供直观、生动的历史学习体验。
+                    </p>
+                    
+                    <h2>✨ 核心功能</h2>
+                    <ul>
+                        <li><strong>人物路线图</strong> - 根据时间顺序自动绘制历史人物的活动轨迹</li>
+                        <li><strong>智能搜索</strong> - 快速查找人物传记，支持模糊匹配</li>
+                        <li><strong>地名定位</strong> - 点击传记中的地名，地图自动跳转</li>
+                        <li><strong>可调整布局</strong> - 自由调整地图和文字区域的比例</li>
+                        <li><strong>折叠面板</strong> - 一键收起搜索和选择器，获得更大阅读空间</li>
+                    </ul>
+                    
+                    <h2>🎯 项目目标</h2>
+                    <p>
+                        我们希望通过现代科技手段，让历史更加生动有趣。通过地图可视化、路线追踪等功能，
+                        帮助用户更好地理解三国时期的历史地理环境，增强对历史事件的空间感知。
+                    </p>
+                    
+                    <h2>📚 数据来源</h2>
+                    <p>
+                        传记内容基于《三国志》原文，地点坐标经过详细考证，力求准确反映历史地理位置。
+                        所有地图服务均符合国家地图审核标准。
+                    </p>
+                    
+                    <h2>🛠️ 技术栈</h2>
+                    <ul>
+                        <li><strong>前端框架</strong>：Vue 3 + Vite</li>
+                        <li><strong>地图引擎</strong>：Leaflet.js</li>
+                        <li><strong>地图服务</strong>：高德地图 / 天地图 / 智图GeoQ</li>
+                        <li><strong>样式</strong>：原生CSS，中国风设计</li>
+                    </ul>
+                    
+                    <h2>👥 开发团队</h2>
+                    <p>
+                        本项目由历史爱好者和技术开发者共同打造，持续更新中。
+                        我们欢迎更多志同道合的朋友加入，共同完善这个项目。
+                    </p>
+                    
+                    <h2>📮 联系我们</h2>
+                    <p>如有问题、建议或合作意向，欢迎通过以下方式联系：</p>
+                    <ul>
+                        <li><strong>问题反馈</strong>：使用页面右下角的反馈按钮</li>
+                        <li><strong>功能建议</strong>：提交到项目Issue页面</li>
+                        <li><strong>内容纠错</strong>：欢迎指出历史或地理错误</li>
+                    </ul>
+                    
+                    <h2>📄 版权声明</h2>
+                    <p>
+                        本项目仅供学习交流使用，传记内容来源于《三国志》等公开历史资料。
+                        地图数据来源于合法授权的地图服务提供商。
+                    </p>
+                    
+                    <h2>🙏 致谢</h2>
+                    <p>
+                        感谢所有历史学者的研究成果，感谢开源社区的技术支持，
+                        感谢每一位使用者的反馈和建议。
+                    </p>
+                    
+                    <div class="version-info">
+                        <p>当前版本：v1.6.0</p>
+                        <p>更新时间：2024年2月</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="selectors" id="selectorsArea">
+                <div class="selector-group">
+                    <label>选择书卷</label>
+                    <select id="bookSelect">
+                        <option value="">请选择...</option>
+                        <option value="wei">魏书</option>
+                        <option value="shu">蜀书</option>
+                        <option value="wu">吴书</option>
+                    </select>
+                </div>
+                
+                <div class="selector-group">
+                    <label>选择传记</label>
+                    <select id="biographySelect" disabled>
+                        <option value="">请先选择书卷...</option>
+                    </select>
+                </div>
+                
+                <div class="selector-group">
+                    <label>选择人物</label>
+                    <select id="personSelect" disabled>
+                        <option value="">请先选择传记...</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="content" id="contentArea">
+                <div class="loading">
+                    请选择书卷、传记和人物以查看内容
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <script type="module">
+        // 关于我们功能
+        const aboutBtn = document.getElementById('aboutBtn');
+        const closeAboutBtn = document.getElementById('closeAboutBtn');
+        const aboutPage = document.getElementById('aboutPage');
+        const selectorsArea = document.getElementById('selectorsArea');
+        const contentArea = document.getElementById('contentArea');
+
+        aboutBtn.addEventListener('click', () => {
+            aboutPage.style.display = 'block';
+            selectorsArea.style.display = 'none';
+            contentArea.style.display = 'none';
+        });
+
+        closeAboutBtn.addEventListener('click', () => {
+            aboutPage.style.display = 'none';
+            selectorsArea.style.display = 'block';
+            contentArea.style.display = 'block';
+        });
+
+        // 地点数据
+        const places = {
+            '涿郡': { lat: 39.53, lng: 115.97, modernName: '河北涿州' },
+            '楼桑村': { lat: 39.48, lng: 115.92, modernName: '河北涿州楼桑庙村' },
+            '中山': { lat: 38.71, lng: 114.99, modernName: '河北定州' },
+            '许昌': { lat: 34.03, lng: 113.85, modernName: '河南许昌' },
+            '荆州': { lat: 30.33, lng: 112.24, modernName: '湖北荆州' },
+            '襄阳': { lat: 32.01, lng: 112.12, modernName: '湖北襄阳' },
+            '成都': { lat: 30.67, lng: 104.07, modernName: '四川成都' },
+            '河北': { lat: 36.62, lng: 114.48, modernName: '黄河以北地区' },
+            '官渡': { lat: 34.88, lng: 113.82, modernName: '河南中牟' },
+            '白马': { lat: 35.29, lng: 114.98, modernName: '河南滑县' },
+            '延津': { lat: 35.14, lng: 114.20, modernName: '河南延津' },
+            '琅邪': { lat: 35.08, lng: 118.35, modernName: '山东临沂' },
+            '合肥': { lat: 31.82, lng: 117.23, modernName: '安徽合肥' },
+            '建业': { lat: 32.06, lng: 118.78, modernName: '江苏南京' },
+            '赤壁': { lat: 29.72, lng: 113.88, modernName: '湖北赤壁' },
+            '下邳': { lat: 34.31, lng: 118.18, modernName: '江苏睢宁' },
+            '江陵': { lat: 30.35, lng: 112.19, modernName: '湖北荆州' },
+            '长坂': { lat: 30.82, lng: 112.50, modernName: '湖北当阳' },
+            '河东': { lat: 35.02, lng: 110.98, modernName: '山西运城' },
+            '樊城': { lat: 32.05, lng: 112.13, modernName: '湖北襄阳樊城区' }
+        };
+
+        // 简化的传记数据
+        const biographyData = {
+            wei: {
+                title: '魏书',
+                biographies: [
+                    {
+                        id: 'wei-1',
+                        title: '武帝纪第一',
+                        persons: [
+                            {
+                                id: 'caocao',
+                                name: '曹操',
+                                text: `
+                                    <div class="biography-title">曹操传</div>
+                                    <p>太祖武皇帝，沛国<a class="place-name wei" data-place="琅邪" data-year="155年" data-faction="wei">琅邪</a>人也。姓曹，讳操，字孟德。建安元年，至<a class="place-name wei" data-place="许昌" data-year="196年" data-faction="wei">许昌</a>，迎天子都许。</p>
+                                    <p>五年，与袁绍战於<a class="place-name wei" data-place="官渡" data-year="200年" data-faction="wei">官渡</a>，大破之。</p>
+                                `
+                            }
+                        ]
+                    }
+                ]
+            },
+            shu: {
+                title: '蜀书',
+                biographies: [
+                    {
+                        id: 'shu-1',
+                        title: '先主传第二',
+                        persons: [
+                            {
+                                id: 'liubei',
+                                name: '刘备',
+                                text: `
+                                    <div class="biography-title">刘备传</div>
+                                    <p>先主姓刘，讳备，字玄德，<a class="place-name shu" data-place="涿郡" data-year="161年" data-faction="neutral">涿郡</a><a class="place-name shu" data-place="楼桑村" data-year="161年" data-faction="neutral">楼桑村</a>人也。</p>
+                                    <p>走<a class="place-name shu" data-place="荆州" data-year="200年" data-faction="neutral">荆州</a>，刘表收之。十九年，进围<a class="place-name shu" data-place="成都" data-year="214年" data-faction="shu">成都</a>，璋出降。</p>
+                                `
+                            }
+                        ]
+                    },
+                    {
+                        id: 'shu-2',
+                        title: '关张传第六',
+                        persons: [
+                            {
+                                id: 'guanyu',
+                                name: '关羽',
+                                text: `
+                                    <div class="biography-title">关羽传</div>
+                                    <p>关羽字云长，<a class="place-name shu" data-place="河东" data-year="160年" data-faction="neutral">河东</a>解人也。亡命奔<a class="place-name shu" data-place="涿郡" data-year="184年" data-faction="neutral">涿郡</a>。</p>
+                                    <p>二十四年，羽围<a class="place-name shu" data-place="襄阳" data-year="219年" data-faction="shu">襄阳</a>，攻曹仁於<a class="place-name shu" data-place="樊城" data-year="219年" data-faction="wei">樊城</a>。</p>
+                                `
+                            },
+                            {
+                                id: 'zhangfei',
+                                name: '张飞',
+                                text: `
+                                    <div class="biography-title">张飞传</div>
+                                    <p>张飞字益德，<a class="place-name shu" data-place="涿郡" data-year="167年" data-faction="neutral">涿郡</a>人也。</p>
+                                    <p>曹公追之，及于当阳<a class="place-name shu" data-place="长坂" data-year="208年" data-faction="neutral">长坂</a>。飞据水断桥，敌皆无敢近者。</p>
+                                `
+                            }
+                        ]
+                    }
+                ]
+            },
+            wu: {
+                title: '吴书',
+                biographies: [
+                    {
+                        id: 'wu-1',
+                        title: '吴主传第二',
+                        persons: [
+                            {
+                                id: 'sunquan',
+                                name: '孙权',
+                                text: `
+                                    <div class="biography-title">孙权传</div>
+                                    <p>孙权字仲谋，吴郡富春人也。十三年，曹公定<a class="place-name wei" data-place="荆州" data-year="208年" data-faction="wei">荆州</a>，权遣周瑜等行。</p>
+                                    <p>黄龙元年，权称尊号，迁都<a class="place-name wu" data-place="建业" data-year="229年" data-faction="wu">建业</a>。</p>
+                                `
+                            }
+                        ]
+                    },
+                    {
+                        id: 'wu-2',
+                        title: '周瑜传第九',
+                        persons: [
+                            {
+                                id: 'zhouyu',
+                                name: '周瑜',
+                                text: `
+                                    <div class="biography-title">周瑜传</div>
+                                    <p>周瑜字公瑾，庐江舒人也。建安十三年，曹公入<a class="place-name wei" data-place="荆州" data-year="208年" data-faction="wei">荆州</a>。</p>
+                                    <p>瑜与曹公战於<a class="place-name wu" data-place="赤壁" data-year="208年" data-faction="wu">赤壁</a>，大破曹公军。瑜还<a class="place-name wu" data-place="江陵" data-year="209年" data-faction="wu">江陵</a>。</p>
+                                `
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        // 地图实例
+        let map = null;
+        let currentMarker = null;
+
+        // 初始化地图
+        function initMap() {
+            console.log('开始初始化地图...');
+            
+            try {
+                map = L.map('map', {
+                    center: [35.0, 110.0],
+                    zoom: 5,
+                    minZoom: 4,
+                    maxZoom: 10
+                });
+
+                console.log('地图对象创建成功');
+
+                // 添加瓦片层
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '',
+                    maxZoom: 19
+                }).addTo(map);
+
+                console.log('地图瓦片层添加成功');
+
+                // 延迟调整尺寸
+                setTimeout(() => {
+                    if (map) {
+                        map.invalidateSize();
+                        console.log('地图尺寸已调整');
+                    }
+                }, 200);
+
+            } catch (error) {
+                console.error('地图初始化失败:', error);
+            }
+        }
+
+        // 显示地点信息
+        function showPlaceInfo(name, year, faction, modernName) {
+            const factionNames = {
+                wei: '魏',
+                shu: '蜀',
+                wu: '吴',
+                neutral: '中立'
+            };
+
+            document.getElementById('placeName').textContent = name;
+            document.getElementById('placeYear').textContent = year || '-';
+            
+            const factionBadge = document.getElementById('placeFaction');
+            factionBadge.textContent = factionNames[faction] || '中立';
+            factionBadge.className = `faction-badge ${faction || 'neutral'}`;
+            
+            if (modernName) {
+                document.getElementById('placeModernName').textContent = modernName;
+                document.getElementById('modernNameItem').style.display = 'flex';
+            } else {
+                document.getElementById('modernNameItem').style.display = 'none';
+            }
+
+            document.getElementById('infoPanel').classList.remove('hidden');
+        }
+
+        // 创建地图标记
+        function createMarker(placeName, year, faction) {
+            const placeData = places[placeName];
+            if (!placeData || !map) {
+                console.error('无法创建标记:', placeName, '地图状态:', !!map);
+                return;
+            }
+
+            // 清除旧标记
+            if (currentMarker) {
+                map.removeLayer(currentMarker);
+            }
+
+            const factionClass = faction || 'neutral';
+            const icon = L.divIcon({
+                className: 'custom-marker-icon',
+                html: `<div class="custom-marker ${factionClass}"></div>`,
+                iconSize: [32, 32],
+                iconAnchor: [16, 32]
+            });
+
+            currentMarker = L.marker([placeData.lat, placeData.lng], { icon }).addTo(map);
+            
+            // 显示信息并移动地图
+            showPlaceInfo(placeName, year, faction, placeData.modernName);
+            map.flyTo([placeData.lat, placeData.lng], 7, { duration: 1.5 });
+
+            console.log('标记已创建:', placeName);
+        }
+
+        // 处理地名点击
+        function handlePlaceClick(event) {
+            const target = event.target;
+            if (target.classList.contains('place-name')) {
+                event.preventDefault();
+                const placeName = target.dataset.place;
+                const year = target.dataset.year;
+                const faction = target.dataset.faction;
+
+                console.log('点击地名:', placeName);
+                createMarker(placeName, year, faction);
+            }
+        }
+
+        // 更新传记选择器
+        function updateBiographySelect(bookId) {
+            const select = document.getElementById('biographySelect');
+            select.innerHTML = '<option value="">请选择...</option>';
+            
+            if (bookId && biographyData[bookId]) {
+                biographyData[bookId].biographies.forEach(bio => {
+                    const option = document.createElement('option');
+                    option.value = bio.id;
+                    option.textContent = bio.title;
+                    select.appendChild(option);
+                });
+                select.disabled = false;
+            } else {
+                select.disabled = true;
+            }
+
+            document.getElementById('personSelect').disabled = true;
+            document.getElementById('personSelect').innerHTML = '<option value="">请先选择传记...</option>';
+        }
+
+        // 更新人物选择器
+        function updatePersonSelect(bookId, bioId) {
+            const select = document.getElementById('personSelect');
+            select.innerHTML = '<option value="">请选择...</option>';
+            
+            if (bookId && bioId && biographyData[bookId]) {
+                const bio = biographyData[bookId].biographies.find(b => b.id === bioId);
+                if (bio) {
+                    bio.persons.forEach(person => {
+                        const option = document.createElement('option');
+                        option.value = person.id;
+                        option.textContent = person.name;
+                        select.appendChild(option);
+                    });
+                    select.disabled = false;
+                }
+            } else {
+                select.disabled = true;
+            }
+        }
+
+        // 显示内容
+        function showContent(bookId, bioId, personId) {
+            const contentArea = document.getElementById('contentArea');
+            
+            if (bookId && bioId && personId && biographyData[bookId]) {
+                const bio = biographyData[bookId].biographies.find(b => b.id === bioId);
+                if (bio) {
+                    const person = bio.persons.find(p => p.id === personId);
+                    if (person) {
+                        contentArea.innerHTML = `<div class="biography">${person.text}</div>`;
+                        // 添加点击事件监听
+                        contentArea.addEventListener('click', handlePlaceClick);
+                        return;
+                    }
+                }
+            }
+            
+            contentArea.innerHTML = '<div class="loading">请选择书卷、传记和人物以查看内容</div>';
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('页面加载完成，准备初始化...');
+            
+            // 延迟初始化地图，确保DOM完全准备好
+            setTimeout(() => {
+                initMap();
+            }, 100);
+
+            // 绑定选择器事件
+            const bookSelect = document.getElementById('bookSelect');
+            const biographySelect = document.getElementById('biographySelect');
+            const personSelect = document.getElementById('personSelect');
+
+            bookSelect.addEventListener('change', (e) => {
+                const bookId = e.target.value;
+                updateBiographySelect(bookId);
+                showContent(null, null, null);
+            });
+
+            biographySelect.addEventListener('change', (e) => {
+                const bookId = bookSelect.value;
+                const bioId = e.target.value;
+                updatePersonSelect(bookId, bioId);
+                showContent(null, null, null);
+            });
+
+            personSelect.addEventListener('change', (e) => {
+                const bookId = bookSelect.value;
+                const bioId = biographySelect.value;
+                const personId = e.target.value;
+                showContent(bookId, bioId, personId);
+            });
+        });
+    </script>
+</body>
+</html>

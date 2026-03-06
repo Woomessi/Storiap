@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地图服务测试</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .info {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .map-container {
+            height: 600px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #status {
+            padding: 15px;
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            margin-bottom: 20px;
+        }
+        .success { background: #d4edda !important; border-left-color: #28a745 !important; }
+        .error { background: #f8d7da !important; border-left-color: #dc3545 !important; }
+    </style>
+</head>
+<body>
+    <h1>🗺️ 三国志地图服务测试工具</h1>
+    
+    <div class="info">
+        <strong>使用说明：</strong>
+        <ol style="margin-left: 20px; margin-top: 10px;">
+            <li>点击下方按钮测试不同的地图服务</li>
+            <li>如果能看到地图，说明该服务可用</li>
+            <li>记下可用的服务名称</li>
+            <li>在项目配置文件中使用该服务</li>
+        </ol>
+    </div>
+
+    <div id="status">准备测试...</div>
+
+    <div class="buttons">
+        <button onclick="testMap('amap')">测试高德地图</button>
+        <button onclick="testMap('osm')">测试OpenStreetMap</button>
+        <button onclick="testMap('geoq_gray')">测试智图灰色</button>
+        <button onclick="testMap('geoq')">测试智图彩色</button>
+        <button onclick="testMap('geoq_warm')">测试智图暖色</button>
+    </div>
+
+    <div id="map" class="map-container"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let map = null;
+        let currentLayer = null;
+
+        const mapConfigs = {
+            amap: {
+                name: '高德地图',
+                url: 'https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}',
+                options: {
+                    subdomains: ['1', '2', '3', '4'],
+                    attribution: '&copy; 高德地图'
+                }
+            },
+            osm: {
+                name: 'OpenStreetMap',
+                url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                options: {
+                    attribution: '&copy; OpenStreetMap'
+                }
+            },
+            geoq_gray: {
+                name: '智图灰色',
+                url: 'https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetGray/MapServer/tile/{z}/{y}/{x}',
+                options: {
+                    attribution: '&copy; GeoQ'
+                }
+            },
+            geoq: {
+                name: '智图彩色',
+                url: 'https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}',
+                options: {
+                    attribution: '&copy; GeoQ'
+                }
+            },
+            geoq_warm: {
+                name: '智图暖色',
+                url: 'https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetWarm/MapServer/tile/{z}/{y}/{x}',
+                options: {
+                    attribution: '&copy; GeoQ'
+                }
+            }
+        };
+
+        function initMap() {
+            if (!map) {
+                map = L.map('map', {
+                    center: [35.0, 110.0],
+                    zoom: 5,
+                    minZoom: 4,
+                    maxZoom: 18
+                });
+                console.log('地图容器创建成功');
+            }
+        }
+
+        function testMap(configName) {
+            const status = document.getElementById('status');
+            const config = mapConfigs[configName];
+            
+            if (!config) {
+                status.className = 'error';
+                status.innerHTML = `❌ 配置 "${configName}" 不存在`;
+                return;
+            }
+
+            status.className = '';
+            status.innerHTML = `⏳ 正在测试 ${config.name}...`;
+
+            try {
+                initMap();
+
+                // 移除旧图层
+                if (currentLayer) {
+                    map.removeLayer(currentLayer);
+                }
+
+                // 添加新图层
+                currentLayer = L.tileLayer(config.url, config.options).addTo(map);
+
+                // 监听瓦片加载
+                let tilesLoaded = 0;
+                let tilesTotal = 0;
+                let hasError = false;
+
+                currentLayer.on('tileloadstart', () => {
+                    tilesTotal++;
+                });
+
+                currentLayer.on('tileload', () => {
+                    tilesLoaded++;
+                    if (tilesLoaded >= 3 && !hasError) {
+                        status.className = 'success';
+                        status.innerHTML = `✅ ${config.name} 加载成功！已加载 ${tilesLoaded} 个瓦片。<br><strong>配置代码：</strong> <code>export const DEFAULT_MAP = '${configName}'</code>`;
+                    }
+                });
+
+                currentLayer.on('tileerror', (e) => {
+                    hasError = true;
+                    status.className = 'error';
+                    status.innerHTML = `❌ ${config.name} 加载失败！<br>错误：无法加载地图瓦片<br>请尝试其他地图服务`;
+                    console.error('瓦片加载错误:', e);
+                });
+
+                // 3秒后检查
+                setTimeout(() => {
+                    if (tilesLoaded === 0 && !hasError) {
+                        status.className = 'error';
+                        status.innerHTML = `⚠️ ${config.name} 可能无法访问<br>请检查网络连接或尝试其他服务`;
+                    }
+                }, 3000);
+
+                console.log(`正在测试: ${config.name}`);
+
+            } catch (error) {
+                status.className = 'error';
+                status.innerHTML = `❌ 测试失败: ${error.message}`;
+                console.error('测试错误:', error);
+            }
+        }
+
+        // 页面加载后自动测试高德地图
+        window.onload = function() {
+            document.getElementById('status').innerHTML = '👆 点击上方按钮测试地图服务';
+            console.log('测试工具已就绪');
+        };
+    </script>
+</body>
+</html>
