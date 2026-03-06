@@ -341,19 +341,16 @@ defineExpose({
 
 <style scoped>
 .map-container {
-  width: v-bind(mapWidth + '%');
+  width: 100%;
+  height: 100%;
   position: relative;
   z-index: 1;
   box-shadow: 4px 0 20px var(--shadow);
-  min-height: 100vh;
-  height: 100%;
-  flex-shrink: 0;
 }
 
 #map {
   width: 100%;
   height: 100%;
-  min-height: 100vh;
   background: #e8dcc4;
 }
 

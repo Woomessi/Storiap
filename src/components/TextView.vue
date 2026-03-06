@@ -113,12 +113,6 @@
         </div>
       </div>
       
-      <!-- 提示信息 - 只在完全空闲时显示 -->
-      <div class="home-tips" v-if="!searchQuery && !selectedBook && !selectedBiography && !selectedPerson">
-        <div class="tip-icon">📚</div>
-        <div class="tip-text">使用上方搜索框快速查找人物</div>
-        <div class="tip-text">或通过分类选择查看传记</div>
-      </div>
     </div>
     
     <!-- 关于我们页面 -->
