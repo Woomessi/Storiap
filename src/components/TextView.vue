@@ -133,7 +133,7 @@
       
       <div class="about-content-scroll">
         <!-- <h3>📖 项目介绍</h3> -->
-        <p>我是史图记的第一位贡献者吴宏瑞，来自《三国志》作者陈寿的故乡——四川南充。希望史图记能够继承先辈遗志，发扬中华文化，提升所有人阅读中国历史经典原著的体验。</p>
+        <p>我是史图记创始人吴宏瑞，来自《三国志》作者陈寿的故乡——四川南充。希望史图记能够继承先辈遗志，发扬中华文化，提升所有人阅读中国历史经典原著的体验。</p>
         <p>这是我的<a href="https://wuhongrui.pages.dev/" target="_blank" rel="noopener noreferrer">个人主页</a>。</p>
         
         <!-- <h3>✨ 核心功能</h3>
@@ -193,6 +193,10 @@ const props = defineProps({
   textWidth: {
     type: Number,
     default: 40
+  },
+  textHeight: {
+    type: Number,
+    default: null   // null 表示横屏模式，不使用高度
   }
 })
 

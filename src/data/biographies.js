@@ -41,71 +41,66 @@ export const biographyData = {
   wei: {
     title: '魏书',
     biographies: [
-      // {
-      //   id: 'wei-1',
-      //   title: '武帝纪第一',
-      //   persons: [caocao, caopi]
-      // },
-      // {
-      //   id: 'wei-2',
-      //   title: '张辽传第十七',
-      //   persons: [zhangliao, xuhuang]
-      // },
-      // {
-      //   id: 'wei-3',
-      //   title: '程郭董刘蒋刘传第十四',
-      //   persons: [guojia]
-      // },
+      {
+        id: 'wei-1',
+        title: '武帝纪第一',
+        persons: [caocao, caopi]
+      },
+      {
+        id: 'wei-2',
+        title: '张辽传第十七',
+        persons: [zhangliao, xuhuang]
+      },
+      {
+        id: 'wei-3',
+        title: '程郭董刘蒋刘传第十四',
+        persons: [guojia]
+      },
       {
         id: 'wei-4',
         title: '二公孙陶四张传第八',
         persons: [zhanglu]
       },
-      // {
-      //   id: 'wei-5',
-      //   title: '二李臧文吕许典二庞阎传第十八',
-      //   persons: [dianwei]
-      // }
+      {
+        id: 'wei-5',
+        title: '二李臧文吕许典二庞阎传第十八',
+        persons: [dianwei]
+      }
     ]
   },
   shu: {
     title: '蜀书',
     biographies: [
-      // {
-      //   id: 'shu-1',
-      //   title: '先主传第二',
-      //   persons: [liubei, liushan]
-      // },
+      {
+        id: 'shu-1',
+        title: '先主传第二',
+        persons: [liubei, liushan]
+      },
       {
         id: 'shu-2',
         title: '关张马黄赵传第六',
-        persons: [huangzhong]
+        persons: [guanyu, zhangfei, zhaoyun, machao, huangzhong]
       }
-      // {
-      //   id: 'shu-2',
-      //   title: '关张马黄赵传第六',
-      //   persons: [guanyu, zhangfei, zhaoyun, machao, huangzhong]
-      // }
     ]
   },
   wu: {
     title: '吴书',
     biographies: [
-      // {
-      //   id: 'wu-1',
-      //   title: '吴主传第二',
-      //   persons: [sunquan, sunliang]
-      // },
-      // {
-      //   id: 'wu-2',
-      //   title: '周瑜鲁肃吕蒙传第九',
-      //   persons: [zhouyu, lusu, lvmeng]
-      // },
-      // {
-      //   id: 'wu-3',
-      //   title: '诸葛滕二孙濮阳传第十九',
-      //   persons: [tengyin]
-      // },
+      {
+        id: 'wu-1',
+        title: '吴主传第二',
+        persons: [sunquan, sunliang]
+      },
+      {
+        id: 'wu-2',
+        title: '周瑜鲁肃吕蒙传第九',
+        persons: [zhouyu, lusu, lvmeng]
+      },
+      {
+        id: 'wu-3',
+        title: '诸葛滕二孙濮阳传第十九',
+        persons: [tengyin]
+      },
       {
         id: 'wu-4',
         title: '吴范刘惇赵达传第十八',
