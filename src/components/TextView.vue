@@ -128,7 +128,7 @@
       <div class="about-content-scroll">
         <!-- <h3>📖 项目介绍</h3> -->
         <p>我是史图记的第一位贡献者吴宏瑞，来自《三国志》作者陈寿的故乡——四川南充。希望史图记能够继承先辈遗志，发扬中华文化，提升所有人阅读中国历史经典原著的体验。</p>
-        <p>这是我的<a href="https://wuhongrui.pages.dev/" target="_blank" rel="noopener noreferrer">个人主页</a>。</p>
+        <p>这是史图记·三国志项目的<a href="https://github.com/Woomessi/Storiap" target="_blank" rel="noopener noreferrer">GitHub主页</a>，具体项目说明请访问该页面。</p>
         
         <!-- <h3>✨ 核心功能</h3>
         <ul>
