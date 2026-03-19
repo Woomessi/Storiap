@@ -41,11 +41,11 @@ export const biographyData = {
   wei: {
     title: '魏书',
     biographies: [
-      // {
-      //   id: 'wei-1',
-      //   title: '武帝纪第一',
-      //   persons: [caocao, caopi]
-      // },
+      {
+        id: 'wei-1',
+        title: '武帝纪第一',
+        persons: [caocao]
+      },
       // {
       //   id: 'wei-2',
       //   title: '张辽传第十七',

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.gushiwen.cn)",
+      "WebSearch",
+      "WebFetch(domain:m.guoxuedashi.net)"
+    ]
+  }
+}
