@@ -34,6 +34,7 @@
 |------|------|------|
 | `places.js` | `src/data/places.js` | 存储所有地名的经纬度和现代地名对照 |
 | `传记文件.js` | `src/data/biographies/[魏\|蜀\|吴]/人物名.js` | 存储各人物传记原文，并在文中用 HTML 标签标记地名 |
+| `biographies.js` | `src\data\biographies.js` | 描述传记结构 |
 
 **标注目标**：让《三国志》传记中每一个出现的历史地名，都能在地图上准确定位、可视化展示。
 
@@ -73,12 +74,28 @@ export const places = {
   // 更多地点……
 }
 ```
+**传记结构文件**（`biographies.js`）的基本格式：
 
+```javascript
+import liudun     from './biographies/wu/liudun.js'
+export const biographyData = {
+  wu: {
+    title: '吴书',
+    biographies: [
+      {
+        id: 'wu-4',
+        title: '吴范刘惇赵达传第十八',
+        persons: [liudun]
+      }
+    ]
+  }
+}
+```
 ---
 
-## 三、标注流程（六步法）
+## 三、标注流程
 
-### 第一步：通读原文，识别所有地名
+### 第1步：通读原文，识别所有地名
 
 打开你领取的传记文件，阅读 `text` 字段中的传记内容。
 
@@ -94,7 +111,7 @@ export const places = {
 
 ---
 
-### 第二步：逐一查证每个地名的现代坐标
+### 第2步：逐一查证每个地名的现代坐标
 
 对于每个识别出的地名，需要确定其对应的**现代地理位置**和**经纬度**。
 
@@ -126,7 +143,7 @@ export const places = {
 
 ---
 
-### 第三步：在 `places.js` 中登记新地点
+### 第3步：在 `places.js` 中登记新地点
 
 查证完坐标后，打开 `src/data/places.js`，检查该地名是否**已经存在**：
 
@@ -152,12 +169,33 @@ export const places = {
 
 ---
 
-### 第四步：在传记原文中用 HTML 标签标记地名
+### 第4步：在传记原文中用 HTML 标签标记地名
 
 打开传记文件，在 `text` 字段中找到需要标注的地名，将其替换为以下格式：
 
 ```html
 <a class="place-name [阵营]" data-place="地名" data-year="年份" data-faction="[阵营]">地名</a>
+```
+
+---
+
+### 第5步：在biographies.js中登记新的传记
+```javascript
+import 新传记     from './biographies/阵营/传主名.js'
+```
+```javascript
+export const biographyData = {
+  阵营: {
+    title: '阵营',
+    biographies: [
+      {
+        id: 'wu-id',
+        title: '传名',
+        persons: [新传记]
+      }
+    ]
+  }
+}
 ```
 
 #### 各属性说明
@@ -202,11 +240,11 @@ text: `
 
 ---
 
-### 第五步：自查与验证
+### 第6步：自查与验证
 
 完成标注后，进行以下自查：
 
-#### 5.1 一致性检查
+#### 6.1 一致性检查
 
 确认所有 `data-place` 的值都能在 `places.js` 中找到对应的 key：
 
@@ -222,7 +260,7 @@ data-place="荆洲"  ❌
 data-place="荊州"  ❌（繁体）
 ```
 
-#### 5.2 格式检查
+#### 6.2 格式检查
 
 - `<a>` 标签是否完整闭合（有开始标签就必须有结束标签）
 - 年份格式是否为 `"XXX年"`
@@ -236,7 +274,7 @@ data-place="荊州"  ❌（繁体）
 <a class="place-name shu" data-place="许昌" data-year="200年" data-faction="wei">许昌</a>
 ```
 
-#### 5.3 运行项目验证（可选）
+#### 6.3 运行项目验证（可选）
 
 如果你有本地开发环境，可以运行项目验证标注效果：
 
@@ -249,7 +287,7 @@ npm run dev   # 启动开发服务器，访问 http://localhost:3000
 
 ---
 
-### 第六步：提交贡献
+### 第7步：提交贡献
 
 完成标注并自查无误后：
 
@@ -310,6 +348,22 @@ text: `
 '新野': { lat: 32.52, lng: 112.36, modernName: '河南省南阳市新野县' },
 ```
 
+**biographies.js 中新增**：
+```javascript
+import zhugeliang     from './biographies/wu/zhugeliang.js'
+export const biographyData = {
+  wu: {
+    title: '蜀书',
+    biographies: [
+      {
+        id: 'shu-3',
+        title: '诸葛亮传第五',
+        persons: [zhugeliang]
+      }
+    ]
+  }
+}
+```
 ---
 
 ## 六、常见错误汇总
