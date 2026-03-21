@@ -13,11 +13,22 @@
 // ── 魏书 ──────────────────────────────────────────────────
 import caocao     from './biographies/wei/caocao.js'
 import caopi      from './biographies/wei/caopi.js'
+import caorui     from './biographies/wei/caorui.js'
+import shaodiiji  from './biographies/wei/shaodiiji.js'
 import zhangliao  from './biographies/wei/zhangliao.js'
 import xuhuang    from './biographies/wei/xuhuang.js'
 import guojia     from './biographies/wei/guojia.js'
 import zhanglu    from './biographies/wei/zhanglu.js'
 import dianwei    from './biographies/wei/dianwei.js'
+import bianhuang  from './biographies/wei/bianhuang.js'
+import zhenhuang  from './biographies/wei/zhenhuang.js'
+import guowen     from './biographies/wei/guowen.js'
+import maohuang   from './biographies/wei/maohuang.js'
+import guoyuan    from './biographies/wei/guoyuan.js'
+import dongzhuo   from './biographies/wei/dongzhuo.js'
+import yuanshao   from './biographies/wei/yuanshao.js'
+import yuanshu    from './biographies/wei/yuanshu.js'
+import liubiao    from './biographies/wei/liubiao.js'
 
 // ── 蜀书 ──────────────────────────────────────────────────
 import liubei     from './biographies/shu/liubei.js'
@@ -46,6 +57,26 @@ export const biographyData = {
         title: '武帝纪第一',
         persons: [caocao]
       },
+      {
+        id: 'wei-2',
+        title: '文帝纪第二',
+        persons: [caopi]
+      },
+      {
+        id: 'wei-3',
+        title: '明帝纪第三',
+        persons: [caorui]
+      },
+      {
+        id: 'wei-5',
+        title: '少帝纪第四',
+        persons: [shaodiiji]
+      },
+      {
+        id: 'wei-6',
+        title: '后妃传第五',
+        persons: [bianhuang, zhenhuang, guowen, maohuang, guoyuan]
+      },
       // {
       //   id: 'wei-2',
       //   title: '张辽传第十七',
@@ -56,6 +87,11 @@ export const biographyData = {
       //   title: '程郭董刘蒋刘传第十四',
       //   persons: [guojia]
       // },
+      {
+        id: 'wei-7',
+        title: '董二袁刘传第六',
+        persons: [dongzhuo, yuanshao, yuanshu, liubiao]
+      },
       {
         id: 'wei-4',
         title: '二公孙陶四张传第八',
