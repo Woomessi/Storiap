@@ -2,18 +2,24 @@
  * 郭嘉传记
  */
 export default {
-  id: 'wei-3-guojia',
+  id: 'wei-14-guojia',
   name: '郭嘉',
   content: {
     title: '郭嘉传',
     text: `
-      <p>郭嘉字奉孝，颍川阳翟人也。初，北见袁绍，谓绍谋臣辛评、郭图曰："夫智者审于量主，故百举百全而功名可立也。袁公徒欲效周公之下士，而未知用人之机。多端寡要，好谋无决，欲与共济天下大难，定霸王之业，难矣！"於是遂去之。先是时，颍川戏志才，筹画士也，太祖甚器之。早卒。太祖与荀彧书曰："自志才亡后，莫可与计事者。汝、颍固多奇士，谁可以继之？"彧荐嘉。召见，论天下事。太祖曰："使孤成大业者，必此人也。"嘉出，亦喜曰："真吾主也。"表为司空军祭酒。</p>
-      <p>　　征吕布，三战破之，布退固守。时士卒疲倦，太祖欲引军还，嘉说太祖急攻之，遂禽布。语在荀攸传。</p>
-      <p>　　孙策转斗千里，尽有江东，闻太祖与袁绍相持於<a class="place-name wei" data-place="官渡" data-year="200年" data-faction="wei">官渡</a>，将渡江北袭许。众闻皆惧，嘉料之曰："策新并江东，所诛皆英豪雄杰，能得人死力者也。然策轻而无备，虽有百万之众，无异於独行中原也。若刺客伏起，一人之敌耳。以吾观之，必死於匹夫之手。"策临江未济，果为许贡客所杀。</p>
-      <p>　　从破袁绍，绍死，又从讨谭、尚于<a class="place-name wei" data-place="黎阳" data-year="202年" data-faction="wei">黎阳</a>，连战数克。诸将欲乘胜遂攻之，嘉曰："袁绍爱此二子，莫適立也。有郭图、逢纪为之谋臣，必交斗其间，还相离也。急之则相持，缓之而后争心生。不如南向荆州若征刘表者，以待其变；变成而后击之，可一举定也。"太祖曰："善。"乃南征。军至西平，谭、尚果争<a class="place-name wei" data-place="冀州" data-year="203年" data-faction="wei">冀州</a>。谭为尚军所败，走保平原，遣辛毗乞降。太祖还救之，遂从定<a class="place-name wei" data-place="邺城" data-year="204年" data-faction="wei">邺</a>。又从攻谭於南皮，冀州平。封嘉洧阳亭侯。</p>
-      <p>　　太祖将征袁尚及三郡乌丸，诸下多惧刘表使刘备袭许以讨太祖，嘉曰："公虽威震天下，胡恃其远，必不设备。因其无备，卒然击之，可破灭也。且袁绍有恩于民夷，而尚兄弟生存。今四州之民，徒以威附，德施未加，舍而南征，尚因乌丸之资，招其死主之臣，胡人一动，民夷俱应，以生蹋顿之心，成觊觎之计，恐青、冀非己之有也。表，坐谈客耳，自知才不足以御备，重任之则恐不能制，轻任之则备不为用，虽虚国远征，公无忧矣。"太祖遂行。至易，嘉言曰："兵贵神速。今千里袭人，辎重多，难以趣利，且彼闻之，必为备；不如留辎重，轻兵兼道以出，掩其不意。"太祖乃密出卢龙塞，直指单于庭。虏卒闻太祖至，惶怖合战。大破之，斩蹋顿及名王已下。尚及兄熙走辽东。</p>
-      <p>　　嘉深通有算略，达於事情。太祖曰："唯奉孝为能知孤意。"年三十八，自柳城还，疾笃，太祖问疾者交错。及薨，临其丧，哀甚，谓荀攸等曰："诸君年皆孤辈也，唯奉孝最少。天下事竟，欲以后事属之，而中年夭折，命也夫！"乃表曰："军祭酒郭嘉，自从征伐，十有一年。每有大议，临敌制变。臣策未决，嘉辄成之。平定天下，谋功为高。不幸短命，事业未终。追思嘉勋，实不可忘。可增邑八百户，并前千户。"谥曰贞侯。子奕嗣。</p>
-      <p>　　后太祖征荆州还，於巴丘遇疾疫，烧船，叹曰："郭奉孝在，不使孤至此。"初，陈群非嘉不治行检，数廷诉嘉，嘉意自若。太祖愈益重之，然以群能持正，亦悦焉。奕为太子文学，早薨。子深嗣。深薨，子猎嗣。</p>
+      <p>郭嘉字奉孝，<a class="place-name wei" data-place="颍川" data-year="190年前" data-faction="neutral">颍川</a><a class="place-name wei" data-place="阳翟" data-year="190年前" data-faction="neutral">阳翟</a>人也。初，北见袁绍，谓绍谋臣辛评、郭图曰："夫智者审于量主，故百举百全而功名可立也。袁公徒欲效周公之下士，而未知用人之机。多端寡要，好谋无决，欲与共济天下大难，定霸王之业，难矣！"於是遂去之。先是时，<a class="place-name wei" data-place="颍川" data-year="190年前" data-faction="neutral">颍川</a>戏志才，筹画士也，太祖甚器之。早卒。太祖与荀彧书曰："自志才亡后，莫可与计事者。汝、<a class="place-name wei" data-place="颍川" data-year="191年" data-faction="neutral">颍</a>固多奇士，谁可以继之？"彧荐嘉。召见，论天下事。太祖曰："使孤成大业者，必此人也。"嘉出，亦喜曰："真吾主也。"表为司空军祭酒。</p>
+
+      <p>征吕布，三战破之，布退固守。时士卒疲倦，太祖欲引军还，嘉说太祖急攻之，遂禽布。语在荀攸传。</p>
+
+      <p>孙策转斗千里，尽有<a class="place-name wei" data-place="江东" data-year="200年" data-faction="wu">江东</a>，闻太祖与袁绍相持於<a class="place-name wei" data-place="官渡" data-year="200年" data-faction="wei">官渡</a>，将渡江北袭<a class="place-name wei" data-place="许昌" data-year="200年" data-faction="wei">许</a>。众闻皆惧，嘉料之曰："策新并<a class="place-name wei" data-place="江东" data-year="200年" data-faction="wu">江东</a>，所诛皆英豪雄杰，能得人死力者也。然策轻而无备，虽有百万之众，无异於独行中原也。若刺客伏起，一人之敌耳。以吾观之，必死於匹夫之手。"策临江未济，果为许贡客所杀。</p>
+
+      <p>从破袁绍，绍死，又从讨谭、尚于<a class="place-name wei" data-place="黎阳" data-year="202年" data-faction="wei">黎阳</a>，连战数克。诸将欲乘胜遂攻之，嘉曰："袁绍爱此二子，莫適立也。有郭图、逢纪为之谋臣，必交斗其间，还相离也。急之则相持，缓之而后争心生。不如南向<a class="place-name wei" data-place="荆州" data-year="202年" data-faction="neutral">荆州</a>若征刘表者，以待其变；变成而后击之，可一举定也。"太祖曰："善。"乃南征。军至<a class="place-name wei" data-place="西平县" data-year="203年" data-faction="wei">西平</a>，谭、尚果争<a class="place-name wei" data-place="冀州" data-year="203年" data-faction="wei">冀州</a>。谭为尚军所败，走保<a class="place-name wei" data-place="平原" data-year="203年" data-faction="wei">平原</a>，遣辛毗乞降。太祖还救之，遂从定<a class="place-name wei" data-place="邺" data-year="204年" data-faction="wei">邺</a>。又从攻谭於<a class="place-name wei" data-place="南皮" data-year="205年" data-faction="wei">南皮</a>，<a class="place-name wei" data-place="冀州" data-year="205年" data-faction="wei">冀州</a>平。封嘉洧阳亭侯。</p>
+
+      <p>太祖将征袁尚及三郡乌丸，诸下多惧刘表使刘备袭<a class="place-name wei" data-place="许昌" data-year="207年" data-faction="wei">许</a>以讨太祖，嘉曰："公虽威震天下，胡恃其远，必不设备。因其无备，卒然击之，可破灭也。且袁绍有恩于民夷，而尚兄弟生存。今四州之民，徒以威附，德施未加，舍而南征，尚因乌丸之资，招其死主之臣，胡人一动，民夷俱应，以生蹋顿之心，成觊觎之计，恐青、<a class="place-name wei" data-place="冀州" data-year="207年" data-faction="wei">冀</a>非己之有也。表，坐谈客耳，自知才不足以御备，重任之则恐不能制，轻任之则备不为用，虽虚国远征，公无忧矣。"太祖遂行。至易，嘉言曰："兵贵神速。今千里袭人，辎重多，难以趣利，且彼闻之，必为备；不如留辎重，轻兵兼道以出，掩其不意。"太祖乃密出<a class="place-name wei" data-place="卢龙塞" data-year="207年" data-faction="neutral">卢龙塞</a>，直指单于庭。虏卒闻太祖至，惶怖合战。大破之，斩蹋顿及名王已下。尚及兄熙走<a class="place-name wei" data-place="辽东" data-year="207年" data-faction="neutral">辽东</a>。</p>
+
+      <p>嘉深通有算略，达於事情。太祖曰："唯奉孝为能知孤意。"年三十八，自<a class="place-name wei" data-place="柳城" data-year="207年" data-faction="neutral">柳城</a>还，疾笃，太祖问疾者交错。及薨，临其丧，哀甚，谓荀攸等曰："诸君年皆孤辈也，唯奉孝最少。天下事竟，欲以后事属之，而中年夭折，命也夫！"乃表曰："军祭酒郭嘉，自从征伐，十有一年。每有大议，临敌制变。臣策未决，嘉辄成之。平定天下，谋功为高。不幸短命，事业未终。追思嘉勋，实不可忘。可增邑八百户，并前千户。"谥曰贞侯。子奕嗣。</p>
+
+      <p>后太祖征<a class="place-name wei" data-place="荆州" data-year="208年" data-faction="neutral">荆州</a>还，於<a class="place-name wei" data-place="巴丘" data-year="208年" data-faction="neutral">巴丘</a>遇疾疫，烧船，叹曰："郭奉孝在，不使孤至此。"初，陈群非嘉不治行检，数廷诉嘉，嘉意自若。太祖愈益重之，然以群能持正，亦悦焉。奕为太子文学，早薨。子深嗣。深薨，子猎嗣。</p>
     `
   }
 }

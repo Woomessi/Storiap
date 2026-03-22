@@ -48,6 +48,40 @@ import xiahoushang from './biographies/wei/xiahoushang.js'
 import xunyu      from './biographies/wei/xunyu.js'
 import xunyou     from './biographies/wei/xunyou.js'
 import jiaxu      from './biographies/wei/jiaxu.js'
+import yuanhuan   from './biographies/wei/yuanhuan.js'
+import zhangfan   from './biographies/wei/zhangfan.js'
+import liangmao   from './biographies/wei/liangmao.js'
+import guoyuan11  from './biographies/wei/guoyuan11.js'
+import tianchou   from './biographies/wei/tianchou.js'
+import wangxiu    from './biographies/wei/wangxiu.js'
+import bingyuan   from './biographies/wei/bingyuan.js'
+import guanning   from './biographies/wei/guanning.js'
+import zhangjian  from './biographies/wei/zhangjian.js'
+import huzhao     from './biographies/wei/huzhao.js'
+import cuiyan     from './biographies/wei/cuiyan.js'
+import maojie     from './biographies/wei/maojie.js'
+import xuyi       from './biographies/wei/xuyi.js'
+import hekui      from './biographies/wei/hekui.js'
+import xingyong   from './biographies/wei/xingyong.js'
+import baoxun     from './biographies/wei/baoxun.js'
+import simazhi    from './biographies/wei/simazhi.js'
+import zhongyao   from './biographies/wei/zhongyao.js'
+import zhongyu    from './biographies/wei/zhongyu.js'
+import huaxin     from './biographies/wei/huaxin.js'
+import wanglang   from './biographies/wei/wanglang.js'
+import wangsu     from './biographies/wei/wangsu.js'
+import chengyu    from './biographies/wei/chengyu.js'
+import dongzhao   from './biographies/wei/dongzhao.js'
+import liuye      from './biographies/wei/liuye.js'
+import jiangji    from './biographies/wei/jiangji.js'
+import liufang    from './biographies/wei/liufang.js'
+import sunzi      from './biographies/wei/sunzi.js'
+import liufu      from './biographies/wei/liufu.js'
+import simalang   from './biographies/wei/simalang.js'
+import liangxi    from './biographies/wei/liangxi.js'
+import zhangi     from './biographies/wei/zhangi.js'
+import wenhui     from './biographies/wei/wenhui.js'
+import jiakui     from './biographies/wei/jiakui.js'
 
 // ── 蜀书 ──────────────────────────────────────────────────
 import liubei     from './biographies/shu/liubei.js'
@@ -87,37 +121,27 @@ export const biographyData = {
         persons: [caorui]
       },
       {
-        id: 'wei-5',
+        id: 'wei-4',
         title: '少帝纪第四',
         persons: [shaodiiji]
       },
       {
-        id: 'wei-6',
+        id: 'wei-5',
         title: '后妃传第五',
         persons: [bianhuang, zhenhuang, guowen, maohuang, guoyuan]
       },
-      // {
-      //   id: 'wei-2',
-      //   title: '张辽传第十七',
-      //   persons: [zhangliao, xuhuang]
-      // },
-      // {
-      //   id: 'wei-3',
-      //   title: '程郭董刘蒋刘传第十四',
-      //   persons: [guojia]
-      // },
       {
-        id: 'wei-7',
+        id: 'wei-6',
         title: '董二袁刘传第六',
         persons: [dongzhuo, yuanshao, yuanshu, liubiao]
       },
       {
-        id: 'wei-8',
+        id: 'wei-7',
         title: '吕布张邈臧洪传第七',
         persons: [lvbu, zhangmiao, zanghong]
       },
       {
-        id: 'wei-4',
+        id: 'wei-8',
         title: '二公孙陶四张传第八',
         persons: [gongsunzan, taoquian, zhangyang, gongsundu, zhangyan, zhangxiu, zhanglu]
       },
@@ -131,11 +155,31 @@ export const biographyData = {
         title: '荀彧荀攸贾诩传第十',
         persons: [xunyu, xunyou, jiaxu]
       },
-      // {
-      //   id: 'wei-5',
-      //   title: '二李臧文吕许典二庞阎传第十八',
-      //   persons: [dianwei]
-      // }
+      {
+        id: 'wei-11',
+        title: '袁张凉国田王邴管传第十一',
+        persons: [yuanhuan, zhangfan, liangmao, guoyuan11, tianchou, wangxiu, bingyuan, guanning, zhangjian, huzhao]
+      },
+      {
+        id: 'wei-12',
+        title: '崔毛徐何邢鲍司马传第十二',
+        persons: [cuiyan, maojie, xuyi, hekui, xingyong, baoxun, simazhi]
+      },
+      {
+        id: 'wei-13',
+        title: '钟繇华歆王朗传第十三',
+        persons: [zhongyao, zhongyu, huaxin, wanglang, wangsu]
+      },
+      {
+        id: 'wei-14',
+        title: '程郭董刘蒋刘传第十四',
+        persons: [chengyu, guojia, dongzhao, liuye, jiangji, liufang, sunzi]
+      },
+      {
+        id: 'wei-15',
+        title: '刘司马梁张温贾传第十五',
+        persons: [liufu, simalang, liangxi, zhangi, wenhui, jiakui]
+      },
     ]
   },
   shu: {
