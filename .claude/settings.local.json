@@ -3,7 +3,23 @@
     "allow": [
       "WebFetch(domain:www.gushiwen.cn)",
       "WebSearch",
-      "WebFetch(domain:m.guoxuedashi.net)"
+      "WebFetch(domain:m.guoxuedashi.net)",
+      "WebFetch(domain:zh.wikisource.org)",
+      "WebFetch(domain:ctext.org)",
+      "WebFetch(domain:zh.m.wikisource.org)",
+      "WebFetch(domain:www.guoxuedashi.net)",
+      "WebFetch(domain:www.wenxuece.com)",
+      "WebFetch(domain:so.gushiwen.cn)",
+      "WebFetch(domain:www.sanguozhi.org.cn)",
+      "WebFetch(domain:zh.wikipedia.org)",
+      "WebFetch(domain:baike.baidu.com)",
+      "WebFetch(domain:www.shicimingju.com)",
+      "WebFetch(domain:wyw.5156edu.com)",
+      "WebFetch(domain:www.wguan.com)",
+      "WebFetch(domain:www.zggdwx.com)",
+      "WebFetch(domain:www.jyqkw.com)",
+      "WebFetch(domain:api.wikimedia.org)",
+      "WebFetch(domain:www.guoxuemeng.com)"
     ]
   }
 }

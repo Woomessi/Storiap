@@ -29,6 +29,25 @@ import dongzhuo   from './biographies/wei/dongzhuo.js'
 import yuanshao   from './biographies/wei/yuanshao.js'
 import yuanshu    from './biographies/wei/yuanshu.js'
 import liubiao    from './biographies/wei/liubiao.js'
+import lvbu       from './biographies/wei/lvbu.js'
+import zhangmiao  from './biographies/wei/zhangmiao.js'
+import zanghong   from './biographies/wei/zanghong.js'
+import gongsunzan from './biographies/wei/gongsunzan.js'
+import taoquian   from './biographies/wei/taoquian.js'
+import zhangyang  from './biographies/wei/zhangyang.js'
+import gongsundu  from './biographies/wei/gongsundu.js'
+import zhangyan   from './biographies/wei/zhangyan.js'
+import zhangxiu   from './biographies/wei/zhangxiu.js'
+import xiahoudun  from './biographies/wei/xiahoudun.js'
+import xiahouyuan from './biographies/wei/xiahouyuan.js'
+import caoren     from './biographies/wei/caoren.js'
+import caohong    from './biographies/wei/caohong.js'
+import caoxiu     from './biographies/wei/caoxiu.js'
+import caozhen    from './biographies/wei/caozhen.js'
+import xiahoushang from './biographies/wei/xiahoushang.js'
+import xunyu      from './biographies/wei/xunyu.js'
+import xunyou     from './biographies/wei/xunyou.js'
+import jiaxu      from './biographies/wei/jiaxu.js'
 
 // ── 蜀书 ──────────────────────────────────────────────────
 import liubei     from './biographies/shu/liubei.js'
@@ -93,9 +112,24 @@ export const biographyData = {
         persons: [dongzhuo, yuanshao, yuanshu, liubiao]
       },
       {
+        id: 'wei-8',
+        title: '吕布张邈臧洪传第七',
+        persons: [lvbu, zhangmiao, zanghong]
+      },
+      {
         id: 'wei-4',
         title: '二公孙陶四张传第八',
-        persons: [zhanglu]
+        persons: [gongsunzan, taoquian, zhangyang, gongsundu, zhangyan, zhangxiu, zhanglu]
+      },
+      {
+        id: 'wei-9',
+        title: '诸夏侯曹传第九',
+        persons: [xiahoudun, xiahouyuan, caoren, caohong, caoxiu, caozhen, xiahoushang]
+      },
+      {
+        id: 'wei-10',
+        title: '荀彧荀攸贾诩传第十',
+        persons: [xunyu, xunyou, jiaxu]
       },
       // {
       //   id: 'wei-5',
