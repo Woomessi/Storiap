@@ -1,0 +1,13 @@
+/**
+ * 庞德传记
+ */
+export default {
+  id: 'wei-18-pangde',
+  name: '庞德',
+  content: {
+    title: '庞德传',
+    text: `
+      <p>庞德字令明，<a class="place-name wei" data-place="南安" data-year="190年前" data-faction="neutral">南安</a>狟道人也。少为郡吏州从事。初平中，从马腾击反羌叛氐。数有功，稍迁至校尉。建安中，太祖讨袁谭、尚於<a class="place-name wei" data-place="黎阳" data-year="202年" data-faction="neutral">黎阳</a>，谭遣郭援、高幹等略取<a class="place-name wei" data-place="河东" data-year="202年" data-faction="neutral">河东</a>，太祖使锺繇率<a class="place-name wei" data-place="关中" data-year="202年" data-faction="neutral">关中</a>诸将讨之。德随腾子超拒援、幹於<a class="place-name wei" data-place="平阳" data-year="202年" data-faction="neutral">平阳</a>，德为军锋，进攻援、幹，大破之，亲斩援首。拜中郎将，封都亭侯。后张白骑叛於<a class="place-name wei" data-place="弘农" data-year="203年" data-faction="neutral">弘农</a>，德复随腾征之，破白骑於两<a class="place-name wei" data-place="崤" data-year="203年" data-faction="neutral">殽</a>间。每战，常陷陈卻敌，勇冠腾军。后腾徵为卫尉，德留属超。太祖破超於<a class="place-name wei" data-place="渭南" data-year="211年" data-faction="neutral">渭南</a>，德随超亡入<a class="place-name wei" data-place="汉阳" data-year="211年" data-faction="neutral">汉阳</a>，保<a class="place-name wei" data-place="冀城" data-year="211年" data-faction="neutral">冀城</a>。后复随超奔<a class="place-name wei" data-place="汉中" data-year="212年" data-faction="neutral">汉中</a>，从张鲁。太祖定<a class="place-name wei" data-place="汉中" data-year="215年" data-faction="wei">汉中</a>，德随众降。太祖素闻其骁勇，拜立义将军，封关门亭侯，邑三百户。侯音、卫开等以<a class="place-name wei" data-place="宛" data-year="219年" data-faction="neutral">宛</a>叛，德将所领与曹仁共攻拔<a class="place-name wei" data-place="宛" data-year="219年" data-faction="wei">宛</a>，斩音、开，遂南屯<a class="place-name wei" data-place="樊城" data-year="219年" data-faction="wei">樊</a>，讨关羽。<a class="place-name wei" data-place="樊城" data-year="219年" data-faction="wei">樊</a>下诸将以德兄在<a class="place-name wei" data-place="汉中" data-year="219年" data-faction="shu">汉中</a>，颇疑之。德常曰："我受国恩，义在效死。我欲身自击羽。今年我不杀羽，羽当杀我。"后亲与羽交战，射羽中额。时德常乘白马，羽军谓之白马将军，皆惮之。仁使德屯<a class="place-name wei" data-place="樊城" data-year="219年" data-faction="wei">樊</a>北十里，会天霖雨十馀日，汉水暴溢，<a class="place-name wei" data-place="樊城" data-year="219年" data-faction="wei">樊</a>下平地五六丈，德与诸将避水上堤。羽乘船攻之，以大船四面射堤上。德被甲持弓，箭不虚发。将军董衡、部曲将董超等欲降，德皆收斩之。自平旦力战至日过中，羽攻益急，矢尽，短兵接战。德谓督将成何曰："吾闻良将不怯死以苟免，烈士不毁节以求生，今日，我死日也。"战益怒，气愈壮，而水浸盛，吏士皆降。德与麾下将一人，五伯二人，弯弓傅矢，乘小船欲还仁营。水盛船覆，失弓矢，独抱船覆水中，为羽所得，立而不跪。羽谓曰："卿兄在<a class="place-name wei" data-place="汉中" data-year="219年" data-faction="shu">汉中</a>，我欲以卿为将，不早降何为？"德骂羽曰："竖子，何谓降也！魏王带甲百万，威振天下。汝刘备庸才耳，岂能敌邪！我宁为国家鬼，不为贼将也。"遂为羽所杀。太祖闻而悲之，为之流涕，封其二子为列侯。文帝即王位，乃遣使就德墓赐谥，策曰："昔先轸丧元，王蠋绝脰，陨身徇节，前代美之。惟侯式昭果毅，蹈难成名，声溢当时，义高在昔，寡人愍焉，谥曰壮侯"又赐子会等四人爵关内侯，邑各百户。会勇烈有父风，官至中尉将军，封列侯。</p>
+    `
+  }
+}

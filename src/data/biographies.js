@@ -82,6 +82,57 @@ import liangxi    from './biographies/wei/liangxi.js'
 import zhangi     from './biographies/wei/zhangi.js'
 import wenhui     from './biographies/wei/wenhui.js'
 import jiakui     from './biographies/wei/jiakui.js'
+import renjun     from './biographies/wei/renjun.js'
+import suze       from './biographies/wei/suze.js'
+import duji       from './biographies/wei/duji.js'
+import dushu      from './biographies/wei/dushu.js'
+import zhenghun   from './biographies/wei/zhenghun.js'
+import cangci     from './biographies/wei/cangci.js'
+import yuejin     from './biographies/wei/yuejin.js'
+import yujin      from './biographies/wei/yujin.js'
+import zhanghe    from './biographies/wei/zhanghe.js'
+import zhuling    from './biographies/wei/zhuling.js'
+import litdian    from './biographies/wei/litdian.js'
+import litong     from './biographies/wei/litong.js'
+import zangba     from './biographies/wei/zangba.js'
+import wenping    from './biographies/wei/wenping.js'
+import lvqian     from './biographies/wei/lvqian.js'
+import xuchu      from './biographies/wei/xuchu.js'
+import pangde     from './biographies/wei/pangde.js'
+import pangyu     from './biographies/wei/pangyu.js'
+import yanwen     from './biographies/wei/yanwen.js'
+import caochang   from './biographies/wei/caochang.js'
+import caozhi     from './biographies/wei/caozhi.js'
+import caoxiong   from './biographies/wei/caoxiong.js'
+import caoang     from './biographies/wei/caoang.js'
+import caoshuo    from './biographies/wei/caoshuo.js'
+import caochong   from './biographies/wei/caochong.js'
+import caoju      from './biographies/wei/caoju.js'
+import caoyu      from './biographies/wei/caoyu.js'
+import caolin     from './biographies/wei/caolin.js'
+import caogun     from './biographies/wei/caogun.js'
+import caoxuan    from './biographies/wei/caoxuan.js'
+import caojun     from './biographies/wei/caojun.js'
+import caojv      from './biographies/wei/caojv.js'
+import caogan     from './biographies/wei/caogan.js'
+import caoshang   from './biographies/wei/caoshang.js'
+import caobiao    from './biographies/wei/caobiao.js'
+import caoqin     from './biographies/wei/caoqin.js'
+import caocheng   from './biographies/wei/caocheng.js'
+import caozheng   from './biographies/wei/caozheng.js'
+import caojing    from './biographies/wei/caojing.js'
+import caojun2    from './biographies/wei/caojun2.js'
+import caoji      from './biographies/wei/caoji.js'
+import caohui     from './biographies/wei/caohui.js'
+import caomao     from './biographies/wei/caomao.js'
+import caoxie     from './biographies/wei/caoxie.js'
+import caorui2    from './biographies/wei/caorui2.js'
+import caojian    from './biographies/wei/caojian.js'
+import caolin2    from './biographies/wei/caolin2.js'
+import caoli      from './biographies/wei/caoli.js'
+import caoyong    from './biographies/wei/caoyong.js'
+import caogong    from './biographies/wei/caogong.js'
+import caoyan     from './biographies/wei/caoyan.js'
 
 // ── 蜀书 ──────────────────────────────────────────────────
 import liubei     from './biographies/shu/liubei.js'
@@ -179,6 +230,36 @@ export const biographyData = {
         id: 'wei-15',
         title: '刘司马梁张温贾传第十五',
         persons: [liufu, simalang, liangxi, zhangi, wenhui, jiakui]
+      },
+      {
+        id: 'wei-16',
+        title: '任苏杜郑仓传第十六',
+        persons: [renjun, suze, duji, dushu, zhenghun, cangci]
+      },
+      {
+        id: 'wei-17',
+        title: '张乐于张徐传第十七',
+        persons: [zhangliao, yuejin, yujin, zhanghe, xuhuang, zhuling]
+      },
+      {
+        id: 'wei-18',
+        title: '二李臧文吕许典二庞阎传第十八',
+        persons: [litdian, litong, zangba, wenping, lvqian, xuchu, dianwei, pangde, pangyu, yanwen]
+      },
+      {
+        id: 'wei-19',
+        title: '任城陈萧王传第十九',
+        persons: [caochang, caozhi, caoxiong]
+      },
+      {
+        id: 'wei-20',
+        title: '武文世王公传第二十',
+        persons: [
+          caoang, caoshuo, caochong, caoju, caoyu, caolin, caogun,
+          caoxuan, caojun, caojv, caogan, caoshang, caobiao, caoqin,
+          caocheng, caozheng, caojing, caojun2, caoji, caohui, caomao,
+          caoxie, caorui2, caojian, caolin2, caoli, caoyong, caogong, caoyan
+        ]
       },
     ]
   },
