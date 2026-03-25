@@ -133,6 +133,46 @@ import caoli      from './biographies/wei/caoli.js'
 import caoyong    from './biographies/wei/caoyong.js'
 import caogong    from './biographies/wei/caogong.js'
 import caoyan     from './biographies/wei/caoyan.js'
+import wangcan    from './biographies/wei/wangcan.js'
+import weiji      from './biographies/wei/weiji.js'
+import huanjie    from './biographies/wei/huanjie.js'
+import chenqun    from './biographies/wei/chenqun.js'
+import chentai    from './biographies/wei/chentai.js'
+import chenjiao   from './biographies/wei/chenjiao.js'
+import xuxuan     from './biographies/wei/xuxuan.js'
+import weizhen    from './biographies/wei/weizhen.js'
+import luyu       from './biographies/wei/luyu.js'
+import liuyi      from './biographies/wei/liuyi.js'
+import liushao    from './biographies/wei/liushao.js'
+import fugu       from './biographies/wei/fugu.js'
+import heqia      from './biographies/wei/heqia.js'
+import changlin   from './biographies/wei/changlin.js'
+import yangjun    from './biographies/wei/yangjun.js'
+import duxi       from './biographies/wei/duxi.js'
+import zhaoyan    from './biographies/wei/zhaoyan.js'
+import peiqian    from './biographies/wei/peiqian.js'
+import hanjia     from './biographies/wei/hanjia.js'
+import cuilin     from './biographies/wei/cuilin.js'
+import gaoliu     from './biographies/wei/gaoliu.js'
+import sunli      from './biographies/wei/sunli.js'
+import wangguan   from './biographies/wei/wangguan.js'
+import xinpi      from './biographies/wei/xinpi.js'
+import yangfu     from './biographies/wei/yangfu.js'
+import gaotanglong from './biographies/wei/gaotanglong.js'
+import zhanqian   from './biographies/wei/zhanqian.js'
+import manchong   from './biographies/wei/manchong.js'
+import tianyu     from './biographies/wei/tianyu.js'
+import qianzhao   from './biographies/wei/qianzhao.js'
+import guohuai    from './biographies/wei/guohuai.js'
+import xumiao     from './biographies/wei/xumiao.js'
+import huzhi      from './biographies/wei/huzhi.js'
+import wangchang  from './biographies/wei/wangchang.js'
+import wangji     from './biographies/wei/wangji.js'
+import wanglin    from './biographies/wei/wanglin.js'
+import guanqiujian from './biographies/wei/guanqiujian.js'
+import zhugetan   from './biographies/wei/zhugetan.js'
+import dengai     from './biographies/wei/dengai.js'
+import zhonghui   from './biographies/wei/zhonghui.js'
 
 // ── 蜀书 ──────────────────────────────────────────────────
 import liubei     from './biographies/shu/liubei.js'
@@ -260,6 +300,46 @@ export const biographyData = {
           caocheng, caozheng, caojing, caojun2, caoji, caohui, caomao,
           caoxie, caorui2, caojian, caolin2, caoli, caoyong, caogong, caoyan
         ]
+      },
+      {
+        id: 'wei-21',
+        title: '王卫二刘傅传第二十一',
+        persons: [wangcan, weiji, liuyi, liushao, fugu]
+      },
+      {
+        id: 'wei-22',
+        title: '桓二陈徐卫卢传第二十二',
+        persons: [huanjie, chenqun, chentai, chenjiao, xuxuan, weizhen, luyu]
+      },
+      {
+        id: 'wei-23',
+        title: '和常杨杜赵裴传第二十三',
+        persons: [heqia, changlin, yangjun, duxi, zhaoyan, peiqian]
+      },
+      {
+        id: 'wei-24',
+        title: '韩崔高孙王传第二十四',
+        persons: [hanjia, cuilin, gaoliu, sunli, wangguan]
+      },
+      {
+        id: 'wei-25',
+        title: '辛毗杨阜高堂隆传第二十五',
+        persons: [xinpi, yangfu, gaotanglong, zhanqian]
+      },
+      {
+        id: 'wei-26',
+        title: '满田牵郭传第二十六',
+        persons: [manchong, tianyu, qianzhao, guohuai]
+      },
+      {
+        id: 'wei-27',
+        title: '徐胡二王传第二十七',
+        persons: [xumiao, huzhi, wangchang, wangji]
+      },
+      {
+        id: 'wei-28',
+        title: '王毋丘诸葛邓钟传第二十八',
+        persons: [wanglin, guanqiujian, zhugetan, dengai, zhonghui]
       },
     ]
   },

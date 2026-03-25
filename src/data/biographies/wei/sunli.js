@@ -1,0 +1,19 @@
+/**
+ * 孙礼传记
+ * 魏书·韩崔高孙王传第二十四
+ */
+export default {
+  id: 'wei-24-sunli',
+  name: '孙礼',
+  content: {
+    title: '孙礼传',
+    text: `
+      <p>孙礼字德达，<a class="place-name wei" data-place="涿郡" data-year="185年前" data-faction="neutral">涿郡</a><a class="place-name wei" data-place="容城" data-year="185年前" data-faction="neutral">容城</a>人也。太祖平<a class="place-name wei" data-place="幽州" data-year="207年" data-faction="wei">幽州</a>，召为司空军谋掾。初丧乱时，礼与母相失，同郡马台求得礼母，礼推家财尽以与台。台后坐法当死，礼私导令逾狱自首，既而曰："臣无逃亡之义。"径诣刺奸主簿温恢。恢嘉之，具白太祖，各减死一等。</p>
+      <p>后除<a class="place-name wei" data-place="河间" data-year="208年" data-faction="wei">河间</a>郡丞，稍迁<a class="place-name wei" data-place="荥阳" data-year="210年" data-faction="wei">荥阳</a>都尉。鲁山中贼数百人，保固险阻，为民作害；乃徙礼为<a class="place-name wei" data-place="鲁" data-year="212年" data-faction="wei">鲁</a>相。礼至官，出俸谷，发吏民，募首级，招纳降附，使还为间，应时平泰。历<a class="place-name wei" data-place="山阳" data-year="215年" data-faction="wei">山阳</a>、<a class="place-name wei" data-place="平原" data-year="217年" data-faction="wei">平原</a>、<a class="place-name wei" data-place="平昌" data-year="219年" data-faction="wei">平昌</a>、<a class="place-name wei" data-place="琅邪" data-year="221年" data-faction="wei">琅邪</a>太守。从大司马曹休征吴於<a class="place-name wei" data-place="夹石" data-year="228年" data-faction="wei">夹石</a>，礼谏以为不可深入，不从而败。迁<a class="place-name wei" data-place="阳平郡" data-year="230年" data-faction="wei">阳平</a>太守，入为尚书。</p>
+      <p>明帝方修宫室，而节气不和，天下少谷。礼固争，罢役，诏曰："敬纳谠言，促遣民作。"时李惠监作，复奏留一月，有所成讫。礼径至作所，不复重奏，称诏罢民，帝奇其意而不责也。</p>
+      <p>帝猎於大石山，虎趋乘舆，礼便投鞭下马，欲奋剑斫虎，诏令礼上马。明帝临崩之时，以曹爽为大将军，宜得良佐，於床下受遗诏，拜礼大将军长史，加散骑常侍。礼亮直不挠，爽弗便也，以为<a class="place-name wei" data-place="扬州" data-year="240年" data-faction="wei">扬州</a>刺史，加伏波将军，赐爵关内侯。吴大将全琮帅数万众来侵寇，时州兵休使，在者无几。礼躬勒卫兵御之，战於<a class="place-name wei" data-place="芍陂" data-year="241年" data-faction="wei">芍陂</a>，自旦及暮，将士死伤过半。礼犯蹈白刃，马被数创，手秉枹鼓，奋不顾身，贼众乃退。诏书慰劳，赐绢七百匹。礼为死事者设祀哭临，哀号发心，皆以绢付亡者家，无以入身。</p>
+      <p>徵拜少府，出为<a class="place-name wei" data-place="荆州" data-year="244年" data-faction="wei">荆州</a>刺史，迁<a class="place-name wei" data-place="冀州" data-year="245年" data-faction="wei">冀州</a>牧。太傅司马宣王谓礼曰："今<a class="place-name wei" data-place="清河" data-year="245年" data-faction="wei">清河</a>、<a class="place-name wei" data-place="平原" data-year="245年" data-faction="wei">平原</a>争界八年，更二刺史，靡能决之；虞、芮待文王而了，宜善令分明。"礼曰："讼者据墟墓为验，听者以先老为正，而老者不可加以榎楚，又墟墓或迁就高敞，或徙避仇雠。如今所闻，虽皋陶犹将为难。若欲使必也无讼，当以烈祖初封<a class="place-name wei" data-place="平原" data-year="245年" data-faction="wei">平原</a>时图决之。何必推古问故，以益辞讼？昔成王以桐叶戏叔虞，周公便以封之。今图藏在天府，便可於坐上断也，岂待到州乎？"宣王曰："是也。当别下图。"礼到，案图宜属<a class="place-name wei" data-place="平原" data-year="245年" data-faction="wei">平原</a>。而曹爽信<a class="place-name wei" data-place="清河" data-year="245年" data-faction="wei">清河</a>言，下书云："图不可用，当参异同。"礼上疏曰："管仲霸者之佐，其器又小，犹能夺伯氏骈邑，使没齿无怨言。臣受牧伯之任，奉圣朝明图，验地著之界，界实以王翁河为限；而<a class="place-name wei" data-place="鄃" data-year="245年" data-faction="wei">鄃</a>以马丹候为验，诈以鸣犊河为界。假虚讼诉，疑误台阁。窃闻众口铄金，浮石沈木，三人成巿虎，慈母投其杼。今二郡争界八年，一朝决之者，缘有解书图画，可得寻案擿校也。<a class="place-name wei" data-place="平原" data-year="245年" data-faction="wei">平原</a>在两河，向东上，其间有爵堤，爵堤在<a class="place-name wei" data-place="高唐" data-year="245年" data-faction="wei">高唐</a>西南，所争地在<a class="place-name wei" data-place="高唐" data-year="245年" data-faction="wei">高唐</a>西北，相去二十馀里，可谓长叹息流涕者也。案解与图奏而<a class="place-name wei" data-place="鄃" data-year="245年" data-faction="wei">鄃</a>不受诏，此臣软弱不胜其任，臣亦何颜尸禄素餐。"辄束带著履，驾车待放。爽见礼奏，大怒。劾礼怨望，结刑五岁。在家期年，众人多以为言，除城门校尉。</p>
+      <p>时匈奴王刘靖部众强盛，而鲜卑数寇边，乃以礼为<a class="place-name wei" data-place="并州" data-year="248年" data-faction="wei">并州</a>刺史，加振武将军，使持节，护匈奴中郎将。往见太傅司马宣王，有忿色而无言。宣王曰："卿得<a class="place-name wei" data-place="并州" data-year="248年" data-faction="wei">并州</a>，少邪？恚理分界失分乎？今当远别，何不欢也！"礼曰："何明公言之乖细也！礼虽不德，岂以官位往事为意邪？本谓明公齐踪伊、吕，匡辅魏室，上报明帝之讬，下建万世之勋。今社稷将危，天下凶凶，此礼之所以不悦也。"因涕泣横流。宣王曰："且止，忍不可忍。"爽诛后，入为司隶校尉，凡临七郡五州，皆有威信。迁司空，封大利亭侯，邑一百户。礼与卢毓同郡时辈，而情好不睦。为人虽互有长短，然名位略齐云。嘉平二年薨，谥曰景侯。孙元嗣。</p>
+    `
+  }
+}
