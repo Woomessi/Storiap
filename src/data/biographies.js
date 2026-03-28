@@ -173,15 +173,81 @@ import guanqiujian from './biographies/wei/guanqiujian.js'
 import zhugetan   from './biographies/wei/zhugetan.js'
 import dengai     from './biographies/wei/dengai.js'
 import zhonghui   from './biographies/wei/zhonghui.js'
+import huatuo     from './biographies/wei/huatuo.js'
+import dukui      from './biographies/wei/dukui.js'
+import zhujianping from './biographies/wei/zhujianping.js'
+import zhouxuan   from './biographies/wei/zhouxuan.js'
+import guanlu     from './biographies/wei/guanlu.js'
+import wuhuanxianbeidongyi from './biographies/wei/wuhuanxianbeidongyi.js'
 
 // ── 蜀书 ──────────────────────────────────────────────────
-import liubei     from './biographies/shu/liubei.js'
-import liushan    from './biographies/shu/liushan.js'
+import liuyan          from './biographies/shu/liuyan.js'
+import liuzhang        from './biographies/shu/liuzhang.js'
+import liubei          from './biographies/shu/liubei.js'
+import liushan         from './biographies/shu/liushan.js'
+import ganhuanghou     from './biographies/shu/ganhuanghou.js'
+import muhuanghou      from './biographies/shu/muhuanghou.js'
+import jingaihuanghou  from './biographies/shu/jingaihuanghou.js'
+import zhanghuanghou   from './biographies/shu/zhanghuanghou.js'
+import liuyong         from './biographies/shu/liuyong.js'
+import liuli           from './biographies/shu/liuli.js'
+import liuxuan         from './biographies/shu/liuxuan.js'
 import guanyu     from './biographies/shu/guanyu.js'
 import zhangfei   from './biographies/shu/zhangfei.js'
 import zhaoyun    from './biographies/shu/zhaoyun.js'
 import machao     from './biographies/shu/machao.js'
+import zhugeliang from './biographies/shu/zhugeliang.js'
 import huangzhong from './biographies/shu/huangzhong.js'
+import pangtong   from './biographies/shu/pangtong.js'
+import fazheng    from './biographies/shu/fazheng.js'
+import xujing     from './biographies/shu/xujing.js'
+import mizhu      from './biographies/shu/mizhu.js'
+import sunqian    from './biographies/shu/sunqian.js'
+import jianyong   from './biographies/shu/jianyong.js'
+import yiji       from './biographies/shu/yiji.js'
+import qinmi      from './biographies/shu/qinmi.js'
+import donghe     from './biographies/shu/donghe.js'
+import liuba      from './biographies/shu/liuba.js'
+import maliang    from './biographies/shu/maliang.js'
+import masu       from './biographies/shu/masu.js'
+import chenzhen   from './biographies/shu/chenzhen.js'
+import dongyin    from './biographies/shu/dongyin.js'
+import chenzhi    from './biographies/shu/chenzhi.js'
+import lvyi       from './biographies/shu/lvyi.js'
+import liufeng    from './biographies/shu/liufeng.js'
+import pengyang   from './biographies/shu/pengyang.js'
+import liaoli     from './biographies/shu/liaoli.js'
+import liyan      from './biographies/shu/liyan.js'
+import liuyan2    from './biographies/shu/liuyan2.js'
+import weiyan     from './biographies/shu/weiyan.js'
+import yangyi     from './biographies/shu/yangyi.js'
+import huojun     from './biographies/shu/huojun.js'
+import wanglian   from './biographies/shu/wanglian.js'
+import xianglang  from './biographies/shu/xianglang.js'
+import zhangyi    from './biographies/shu/zhangyi.js'
+import yanghong   from './biographies/shu/yanghong.js'
+import feishi     from './biographies/shu/feishi.js'
+import duwei      from './biographies/shu/duwei.js'
+import wuliang    from './biographies/shu/wuliang.js'
+import zhouqun    from './biographies/shu/zhouqun.js'
+import duqiong    from './biographies/shu/duqiong.js'
+import xuci       from './biographies/shu/xuci.js'
+import mengguang  from './biographies/shu/mengguang.js'
+import laimin     from './biographies/shu/laimin.js'
+import yinmo      from './biographies/shu/yinmo.js'
+import lizuan     from './biographies/shu/lizuan.js'
+import qiaozhou   from './biographies/shu/qiaozhou.js'
+import quezheng   from './biographies/shu/quezheng.js'
+import huangquan  from './biographies/shu/huangquan.js'
+import lihui      from './biographies/shu/lihui.js'
+import lvkai      from './biographies/shu/lvkai.js'
+import mazhong    from './biographies/shu/mazhong.js'
+import wangping   from './biographies/shu/wangping.js'
+import zhangyi2   from './biographies/shu/zhangyi2.js'
+import jiangwan   from './biographies/shu/jiangwan.js'
+import feiyi      from './biographies/shu/feiyi.js'
+import jiangwei   from './biographies/shu/jiangwei.js'
+import dengzhangzongyangzhuan from './biographies/shu/dengzhangzongyangzhuan.js'
 
 // ── 吴书 ──────────────────────────────────────────────────
 import sunquan    from './biographies/wu/sunquan.js'
@@ -341,26 +407,96 @@ export const biographyData = {
         title: '王毋丘诸葛邓钟传第二十八',
         persons: [wanglin, guanqiujian, zhugetan, dengai, zhonghui]
       },
+      {
+        id: 'wei-29',
+        title: '方技传第二十九',
+        persons: [huatuo, dukui, zhujianping, zhouxuan, guanlu]
+      },
+      {
+        id: 'wei-30',
+        title: '乌丸鲜卑东夷传第三十',
+        persons: [wuhuanxianbeidongyi]
+      },
     ]
   },
   shu: {
     title: '蜀书',
     biographies: [
-      // {
-      //   id: 'shu-1',
-      //   title: '先主传第二',
-      //   persons: [liubei, liushan]
-      // },
+      {
+        id: 'shu-1',
+        title: '刘二牧传第一',
+        persons: [liuyan, liuzhang]
+      },
       {
         id: 'shu-2',
+        title: '先主传第二',
+        persons: [liubei]
+      },
+      {
+        id: 'shu-3',
+        title: '后主传第三',
+        persons: [liushan]
+      },
+      {
+        id: 'shu-4',
+        title: '二主妃子传第四',
+        persons: [ganhuanghou, muhuanghou, jingaihuanghou, zhanghuanghou, liuyong, liuli, liuxuan]
+      },
+      {
+        id: 'shu-5',
+        title: '诸葛亮传第五',
+        persons: [zhugeliang]
+      },
+      {
+        id: 'shu-6',
         title: '关张马黄赵传第六',
-        persons: [huangzhong]
+        persons: [guanyu, zhangfei, machao, huangzhong, zhaoyun]
+      },
+      {
+        id: 'shu-7',
+        title: '庞统法正传第七',
+        persons: [pangtong, fazheng]
+      },
+      {
+        id: 'shu-8',
+        title: '许麋孙简伊秦传第八',
+        persons: [xujing, mizhu, sunqian, jianyong, yiji, qinmi]
+      },
+      {
+        id: 'shu-9',
+        title: '董刘马陈董吕传第九',
+        persons: [donghe, liuba, maliang, masu, chenzhen, dongyin, chenzhi, lvyi]
+      },
+      {
+        id: 'shu-10',
+        title: '刘彭廖李刘魏杨传第十',
+        persons: [liufeng, pengyang, liaoli, liyan, liuyan2, weiyan, yangyi]
+      },
+      {
+        id: 'shu-11',
+        title: '霍王向张杨费传第十一',
+        persons: [huojun, wanglian, xianglang, zhangyi, yanghong, feishi]
+      },
+      {
+        id: 'shu-12',
+        title: '杜周杜许孟来尹李谯郤传第十二',
+        persons: [duwei, wuliang, zhouqun, duqiong, xuci, mengguang, laimin, yinmo, lizuan, qiaozhou, quezheng]
+      },
+      {
+        id: 'shu-13',
+        title: '黄李吕马王张传第十三',
+        persons: [huangquan, lihui, lvkai, mazhong, wangping, zhangyi2]
+      },
+      {
+        id: 'shu-14',
+        title: '蒋琬费祎姜维传第十四',
+        persons: [jiangwan, feiyi, jiangwei]
+      },
+      {
+        id: 'shu-15',
+        title: '邓张宗杨传第十五',
+        persons: [dengzhangzongyangzhuan]
       }
-      // {
-      //   id: 'shu-2',
-      //   title: '关张马黄赵传第六',
-      //   persons: [guanyu, zhangfei, zhaoyun, machao, huangzhong]
-      // }
     ]
   },
   wu: {

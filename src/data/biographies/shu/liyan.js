@@ -1,0 +1,15 @@
+/**
+ * 李严传记
+ */
+export default {
+  id: 'shu-10-liyan',
+  name: '李严',
+  content: {
+    title: '李严传',
+    text: `
+      <p>李严字正方，<a class="place-name shu" data-place="南阳" data-year="175年前" data-faction="neutral">南阳</a>人也。少为郡职吏，以才幹称。<a class="place-name shu" data-place="荆州" data-year="200年" data-faction="neutral">荆州</a>牧刘表使历诸郡县。曹公入<a class="place-name shu" data-place="荆州" data-year="208年" data-faction="wei">荆州</a>时，严宰<a class="place-name shu" data-place="秭归" data-year="208年" data-faction="neutral">秭归</a>，遂西诣蜀，刘璋以为<a class="place-name shu" data-place="成都" data-year="208年" data-faction="neutral">成都</a>令，复有能名。建安十八年，署严为护军，拒先主於<a class="place-name shu" data-place="绵竹" data-year="214年" data-faction="neutral">绵竹</a>。严率众降先主，先主拜严裨将军。成都既定，为<a class="place-name shu" data-place="犍为" data-year="214年" data-faction="shu">犍为</a>太守、兴业将军。二十三年，盗贼马秦、高胜等起事於<a class="place-name shu" data-place="郪县" data-year="218年" data-faction="shu">郪</a>，合聚部伍数万人，到<a class="place-name shu" data-place="资中" data-year="218年" data-faction="shu">资中</a>县。时先主在<a class="place-name shu" data-place="汉中" data-year="218年" data-faction="shu">汉中</a>，严不更发兵，但率将郡士五千人讨之，斩秦、胜等首。枝党星散，悉复民籍。又越巂夷率高定遣军围<a class="place-name shu" data-place="新道" data-year="218年" data-faction="shu">新道</a>县，严驰往赴救，贼皆破走。加辅汉将军，领郡如故。章武二年，先主徵严诣<a class="place-name shu" data-place="永安" data-year="222年" data-faction="shu">永安</a>宫，拜尚书令。三年，先主疾病，严与诸葛亮并受遗诏辅少主；以严为中都护，统内外军事，留镇<a class="place-name shu" data-place="永安" data-year="223年" data-faction="shu">永安</a>。建兴元年，封都乡侯，假节，加光禄勋。四年，转为前将军。以诸葛亮欲出军<a class="place-name shu" data-place="汉中" data-year="226年" data-faction="shu">汉中</a>，严当知后事，移屯<a class="place-name shu" data-place="江州" data-year="226年" data-faction="shu">江州</a>，留护军陈到驻<a class="place-name shu" data-place="永安" data-year="226年" data-faction="shu">永安</a>，皆统属严。严与孟达书曰："吾与孔明俱受寄讬，忧深责重，思得良伴。"亮亦与达书曰："部分如流，趋舍罔滞，正方性也。"其见贵重如此。八年，迁骠骑将军。以曹真欲三道向汉川，亮命严将二万人赴<a class="place-name shu" data-place="汉中" data-year="230年" data-faction="shu">汉中</a>。亮表严子丰为<a class="place-name shu" data-place="江州" data-year="230年" data-faction="shu">江州</a>都督督军，典严后事。亮以明年当出军，命严以中都护署府事。严改名为平。</p>
+
+      <p>九年春，亮军<a class="place-name shu" data-place="祁山" data-year="231年" data-faction="shu">祁山</a>，平催督运事。秋夏之际，值天霖雨，运粮不继，平遣参军狐忠、督军成藩喻指，呼亮来还；亮承以退军。平闻军退，乃更阳惊，说"军粮饶足，何以便归"！欲以解己不办之责，显亮不进之愆也。又表后主，说"军伪退，欲以诱贼与战"。亮具出其前后手笔书疏本末，平违错章灼。平辞穷情竭，首谢罪负。於是亮表平曰："自先帝崩后，平所在治家，尚为小惠，安身求名，无忧国之事。臣当北出，欲得平兵以镇<a class="place-name shu" data-place="汉中" data-year="231年" data-faction="shu">汉中</a>，平穷难纵横，无有来意，而求以五郡为巴州刺史。去年臣欲西征，欲令平主督<a class="place-name shu" data-place="汉中" data-year="231年" data-faction="shu">汉中</a>，平说司马懿等开府辟召。臣知平鄙情，欲因行之际偪臣取利也，是以表平子丰督主<a class="place-name shu" data-place="江州" data-year="231年" data-faction="shu">江州</a>，隆崇其遇，以取一时之务。平至之日，都委诸事，群臣上下皆怪臣待平之厚也。正以大事未定，汉室倾危，伐平之短，莫若褒之。然谓平情在於荣利而已，不意平心颠倒乃尔。若事稽留，将致祸败，是臣不敏，言多增咎。"乃废平为民，徙<a class="place-name shu" data-place="梓潼" data-year="231年" data-faction="shu">梓潼</a>郡。十二年，平闻亮卒，发病死。平常冀亮当自补复，策后人不能，故以激愤也。丰官至<a class="place-name shu" data-place="朱提" data-year="240年" data-faction="shu">朱提</a>太守。</p>
+    `
+  }
+}
