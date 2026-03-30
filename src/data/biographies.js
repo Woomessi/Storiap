@@ -247,9 +247,15 @@ import zhangyi2   from './biographies/shu/zhangyi2.js'
 import jiangwan   from './biographies/shu/jiangwan.js'
 import feiyi      from './biographies/shu/feiyi.js'
 import jiangwei   from './biographies/shu/jiangwei.js'
-import dengzhangzongyangzhuan from './biographies/shu/dengzhangzongyangzhuan.js'
+import dengzhi              from './biographies/shu/dengzhi.js'
+import zhangyi3             from './biographies/shu/zhangyi3.js'
+import zongyu               from './biographies/shu/zongyu.js'
+import liaohua              from './biographies/shu/liaohua.js'
+import yangxi               from './biographies/shu/yangxi.js'
 
 // ── 吴书 ──────────────────────────────────────────────────
+import sunjian    from './biographies/wu/sunjian.js'
+import sunce      from './biographies/wu/sunce.js'
 import sunquan    from './biographies/wu/sunquan.js'
 import sunliang   from './biographies/wu/sunliang.js'
 import zhouyu     from './biographies/wu/zhouyu.js'
@@ -495,18 +501,23 @@ export const biographyData = {
       {
         id: 'shu-15',
         title: '邓张宗杨传第十五',
-        persons: [dengzhangzongyangzhuan]
+        persons: [dengzhi, zhangyi3, zongyu, liaohua, yangxi]
       }
     ]
   },
   wu: {
     title: '吴书',
     biographies: [
-      // {
-      //   id: 'wu-1',
-      //   title: '吴主传第二',
-      //   persons: [sunquan, sunliang]
-      // },
+      {
+        id: 'wu-0',
+        title: '孙破虏讨逆传第一',
+        persons: [sunjian, sunce]
+      },
+      {
+        id: 'wu-1',
+        title: '吴主传第二',
+        persons: [sunquan]
+      },
       // {
       //   id: 'wu-2',
       //   title: '周瑜鲁肃吕蒙传第九',
