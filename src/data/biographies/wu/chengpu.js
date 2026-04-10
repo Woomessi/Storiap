@@ -1,0 +1,19 @@
+/**
+ * 程普传记
+ */
+export default {
+  id: 'wu-10-chengpu',
+  name: '程普',
+  content: {
+    title: '程普传',
+    text: `
+      <p>程普字德谋，<a class="place-name wu" data-place="右北平" data-year="155年前" data-faction="neutral">右北平</a><a class="place-name wu" data-place="土垠" data-year="155年前" data-faction="neutral">土垠</a>人也。初为州郡吏，有容貌计略，善於应对。从孙坚征伐，讨黄巾於<a class="place-name wu" data-place="宛" data-year="184年" data-faction="neutral">宛</a>、<a class="place-name wu" data-place="邓" data-year="184年" data-faction="neutral">邓</a>，破董卓於<a class="place-name wu" data-place="阳人" data-year="190年" data-faction="neutral">阳人</a>，攻城野战，身被创夷。</p>
+
+      <p>坚薨，复随孙策在<a class="place-name wu" data-place="淮南" data-year="194年" data-faction="neutral">淮南</a>，从攻<a class="place-name wu" data-place="庐江" data-year="194年" data-faction="neutral">庐江</a>，拔之，还俱东渡。策到<a class="place-name wu" data-place="横江" data-year="195年" data-faction="neutral">横江</a>、<a class="place-name wu" data-place="当利" data-year="195年" data-faction="neutral">当利</a>，破张英、于麋等，转下<a class="place-name wu" data-place="秣陵" data-year="195年" data-faction="neutral">秣陵</a>、<a class="place-name wu" data-place="湖孰" data-year="195年" data-faction="neutral">湖孰</a>、<a class="place-name wu" data-place="句容" data-year="195年" data-faction="neutral">句容</a>、<a class="place-name wu" data-place="曲阿" data-year="195年" data-faction="neutral">曲阿</a>，普皆有功，增兵二千，骑五十匹。进破<a class="place-name wu" data-place="乌程" data-year="196年" data-faction="wu">乌程</a>、石木、波门、陵传、<a class="place-name wu" data-place="馀杭" data-year="196年" data-faction="wu">馀杭</a>，普功为多。策入<a class="place-name wu" data-place="会稽" data-year="196年" data-faction="wu">会稽</a>，以普为<a class="place-name wu" data-place="吴郡" data-year="196年" data-faction="wu">吴郡</a>都尉，治<a class="place-name wu" data-place="钱唐" data-year="196年" data-faction="wu">钱唐</a>。后徙<a class="place-name wu" data-place="丹杨" data-year="197年" data-faction="wu">丹杨</a>都尉，居<a class="place-name wu" data-place="石城" data-year="197年" data-faction="wu">石城</a>。复讨<a class="place-name wu" data-place="宣城" data-year="197年" data-faction="wu">宣城</a>、<a class="place-name wu" data-place="泾县" data-year="197年" data-faction="wu">泾</a>、<a class="place-name wu" data-place="安吴" data-year="197年" data-faction="wu">安吴</a>、<a class="place-name wu" data-place="陵阳" data-year="197年" data-faction="wu">陵阳</a>、<a class="place-name wu" data-place="春谷" data-year="197年" data-faction="wu">春谷</a>诸贼，皆破之。策尝攻祖郎，大为所围，普与一骑共蔽扞策，驱马疾呼，以矛突贼，贼披，策因随出。后拜荡寇中郎将，领<a class="place-name wu" data-place="零陵" data-year="200年" data-faction="neutral">零陵</a>太守，从讨刘勋於<a class="place-name wu" data-place="寻阳" data-year="199年" data-faction="neutral">寻阳</a>，进攻黄祖於<a class="place-name wu" data-place="沙羡" data-year="199年" data-faction="neutral">沙羡</a>，还镇<a class="place-name wu" data-place="石城" data-year="200年" data-faction="wu">石城</a>。</p>
+
+      <p>策薨，与张昭等共辅孙权，遂周旋三郡，平讨不服。又从征<a class="place-name wu" data-place="江夏" data-year="208年" data-faction="neutral">江夏</a>，还过<a class="place-name wu" data-place="豫章" data-year="208年" data-faction="wu">豫章</a>，别讨<a class="place-name wu" data-place="乐安江西" data-year="208年" data-faction="wu">乐安</a>。乐安平定，代太史慈备<a class="place-name wu" data-place="海昏" data-year="208年" data-faction="wu">海昬</a>，与周瑜为左右督，破曹公於<a class="place-name wu" data-place="乌林" data-year="208年" data-faction="neutral">乌林</a>，又进攻<a class="place-name wu" data-place="南郡" data-year="209年" data-faction="wei">南郡</a>，走曹仁。拜裨将军，领<a class="place-name wu" data-place="江夏" data-year="210年" data-faction="wu">江夏</a>太守，治<a class="place-name wu" data-place="沙羡" data-year="210年" data-faction="wu">沙羡</a>，食四县。</p>
+
+      <p>先出诸将，普最年长，时人皆呼程公。性好施与，喜士大夫。周瑜卒，代领<a class="place-name wu" data-place="南郡" data-year="210年" data-faction="wu">南郡</a>太守。权分<a class="place-name wu" data-place="荆州" data-year="211年" data-faction="shu">荆州</a>与刘备，普复还领<a class="place-name wu" data-place="江夏" data-year="214年" data-faction="wu">江夏</a>，迁荡寇将军，卒。权称尊号，追论普功，封子咨为亭侯。</p>
+    `
+  }
+}

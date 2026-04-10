@@ -1,0 +1,15 @@
+/**
+ * 孙韶传记（吴书·宗室传第六）
+ */
+export default {
+  id: 'wu-6-sunshao',
+  name: '孙韶',
+  content: {
+    title: '孙韶传',
+    text: `
+      <p>孙韶字公礼。伯父河，字伯海，本姓俞氏，亦吴人也。孙策爱之，赐姓为孙，列之属籍。后为将军，屯<a class="place-name wu" data-place="京口" data-year="200年" data-faction="wu">京城</a>。</p>
+      <p>初，孙权杀<a class="place-name wu" data-place="吴郡" data-year="200年" data-faction="wu">吴郡</a>太守盛宪，宪故孝廉妫览、戴员亡匿山中，孙翊为<a class="place-name wu" data-place="丹杨" data-year="203年" data-faction="wu">丹杨</a>，皆礼致之。览为大都督督兵，员为郡丞。及翊遇害，河驰赴<a class="place-name wu" data-place="宛陵" data-year="203年" data-faction="wu">宛陵</a>，责怒览、员，以不能全权，令使奸变得施。二人议曰："伯海与将军疏远，而责我乃耳。讨虏若来，吾属无遗矣。"遂杀河，使人北迎<a class="place-name wu" data-place="扬州" data-year="203年" data-faction="neutral">扬州</a>刺史刘馥，令住<a class="place-name wu" data-place="历阳" data-year="203年" data-faction="neutral">历阳</a>，以<a class="place-name wu" data-place="丹杨" data-year="203年" data-faction="wu">丹杨</a>应之。会翊帐下徐元、孙高、傅婴等杀览、员。</p>
+      <p>韶年十七，收河馀众，缮治<a class="place-name wu" data-place="京口" data-year="203年" data-faction="wu">京城</a>，起楼橹，脩器备以御敌。权闻乱，从<a class="place-name wu" data-place="椒丘" data-year="203年" data-faction="wu">椒丘</a>还，过定<a class="place-name wu" data-place="丹杨" data-year="203年" data-faction="wu">丹杨</a>，引军归吴。夜至<a class="place-name wu" data-place="京口" data-year="203年" data-faction="wu">京城</a>下营，试攻惊之，兵皆乘城传檄备警，讙声动地，颇射外人，权使晓喻乃止。明日见韶，甚器之，即拜承烈校尉，统河部曲，食<a class="place-name wu" data-place="曲阿" data-year="204年" data-faction="wu">曲阿</a>、<a class="place-name wu" data-place="丹徒" data-year="204年" data-faction="wu">丹徒</a>二县，自置长吏，一如河旧。后为<a class="place-name wu" data-place="广陵" data-year="210年" data-faction="wu">广陵</a>太守、偏将军。权为吴王，迁扬威将军，封<a class="place-name wu" data-place="建德" data-year="222年" data-faction="wu">建德</a>侯。权称尊号，为镇北将军。韶为边将数十年，善养士卒，得其死力。常以警疆埸远斥候为务，先知动静而为之备，故鲜有负败。<a class="place-name wu" data-place="青州" data-year="240年" data-faction="wei">青</a>、<a class="place-name wu" data-place="徐州" data-year="240年" data-faction="wei">徐</a>、<a class="place-name wu" data-place="汝南" data-year="240年" data-faction="wei">汝</a>、<a class="place-name wu" data-place="沛郡" data-year="240年" data-faction="wei">沛</a>颇来归附，淮南滨江屯候皆彻兵远徙，徐、泗、江、淮之地，不居者各数百里。自权西征，还都<a class="place-name wu" data-place="武昌" data-year="221年" data-faction="wu">武昌</a>，韶不进见者十馀年。权还<a class="place-name wu" data-place="建业" data-year="229年" data-faction="wu">建业</a>，乃得朝觐。权问<a class="place-name wu" data-place="青州" data-year="229年" data-faction="wei">青</a>、<a class="place-name wu" data-place="徐州" data-year="229年" data-faction="wei">徐</a>诸屯要害，远近人马众寡，魏将帅姓名，尽具识之，有问咸对。身长八尺，仪貌都雅。权欢悦曰："吾久不见公礼，不图进益乃尔。"加领<a class="place-name wu" data-place="幽州" data-year="241年" data-faction="wei">幽州</a>牧、假节。赤乌四年卒。子越嗣，至右将军。越兄楷武卫大将军、临成侯，代越为京下督。楷弟异至领军将军，奕宗正卿，恢<a class="place-name wu" data-place="武陵" data-year="260年" data-faction="wu">武陵</a>太守。天玺元年，徵楷为宫下镇骠骑将军。初永安贼施但等劫皓弟谦，袭<a class="place-name wu" data-place="建业" data-year="266年" data-faction="wu">建业</a>，或白楷二端不即赴讨者，皓数遣诘楷。楷常惶怖，而卒被召，遂将妻子亲兵数百人归晋，晋以为车骑将军，封<a class="place-name wu" data-place="丹杨" data-year="277年" data-faction="wu">丹杨</a>侯。</p>
+    `
+  }
+}

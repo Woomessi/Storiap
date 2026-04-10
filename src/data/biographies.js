@@ -258,11 +258,85 @@ import sunjian    from './biographies/wu/sunjian.js'
 import sunce      from './biographies/wu/sunce.js'
 import sunquan    from './biographies/wu/sunquan.js'
 import sunliang   from './biographies/wu/sunliang.js'
+import sunxiu     from './biographies/wu/sunxiu.js'
+import sunhao     from './biographies/wu/sunhao.js'
+import sunden     from './biographies/wu/sunden.js'
+import sunlv      from './biographies/wu/sunlv.js'
+import sunhe      from './biographies/wu/sunhe.js'
+import sunba      from './biographies/wu/sunba.js'
+import sunfen     from './biographies/wu/sunfen.js'
 import zhouyu     from './biographies/wu/zhouyu.js'
 import lusu       from './biographies/wu/lusu.js'
 import lvmeng     from './biographies/wu/lvmeng.js'
 import tengyin    from './biographies/wu/tengyin.js'
 import liudun     from './biographies/wu/liudun.js'
+import liuyao     from './biographies/wu/liuyao.js'
+import taishici   from './biographies/wu/taishici.js'
+import shixie     from './biographies/wu/shixie.js'
+import wufuren    from './biographies/wu/wufuren.js'
+import xiefuren   from './biographies/wu/xiefuren.js'
+import xufuren    from './biographies/wu/xufuren.js'
+import bufuren    from './biographies/wu/bufuren.js'
+import wangfuren1 from './biographies/wu/wangfuren1.js'
+import wangfuren2 from './biographies/wu/wangfuren2.js'
+import panfuren   from './biographies/wu/panfuren.js'
+import quanfuren  from './biographies/wu/quanfuren.js'
+import zhufuren   from './biographies/wu/zhufuren.js'
+import heji       from './biographies/wu/heji.js'
+import tengfuren  from './biographies/wu/tengfuren.js'
+import sunjing    from './biographies/wu/sunjing.js'
+import sunyu      from './biographies/wu/sunyu.js'
+import sunjiao    from './biographies/wu/sunjiao.js'
+import sunhuan    from './biographies/wu/sunhuan.js'
+import sunben     from './biographies/wu/sunben.js'
+import sunlin     from './biographies/wu/sunlin.js'
+import sunfu      from './biographies/wu/sunfu.js'
+import sunyi      from './biographies/wu/sunyi.js'
+import sunkuang   from './biographies/wu/sunkuang.js'
+import sunshao    from './biographies/wu/sunshao.js'
+import sunhuan2   from './biographies/wu/sunhuan2.js'
+import zhangzhao  from './biographies/wu/zhangzhao.js'
+import guyong     from './biographies/wu/guyong.js'
+import zhugejin   from './biographies/wu/zhugejin.js'
+import buzhi      from './biographies/wu/buzhi.js'
+import zhanghong  from './biographies/wu/zhanghong.js'
+import yanjun     from './biographies/wu/yanjun.js'
+import chengbing  from './biographies/wu/chengbing.js'
+import kanze      from './biographies/wu/kanze.js'
+import xuezong    from './biographies/wu/xuezong.js'
+import chengpu    from './biographies/wu/chengpu.js'
+import huanggai   from './biographies/wu/huanggai.js'
+import handang    from './biographies/wu/handang.js'
+import jiangqin   from './biographies/wu/jiangqin.js'
+import zhoutai    from './biographies/wu/zhoutai.js'
+import chenwu     from './biographies/wu/chenwu.js'
+import dongxi     from './biographies/wu/dongxi.js'
+import ganning    from './biographies/wu/ganning.js'
+import lingtong   from './biographies/wu/lingtong.js'
+import xusheng    from './biographies/wu/xusheng.js'
+import panzhang   from './biographies/wu/panzhang.js'
+import dingfeng   from './biographies/wu/dingfeng.js'
+import zhuzhi     from './biographies/wu/zhuzhi.js'
+import zhuran     from './biographies/wu/zhuran.js'
+import lvfan      from './biographies/wu/lvfan.js'
+import zhuhuan    from './biographies/wu/zhuhuan.js'
+import yufan      from './biographies/wu/yufan.js'
+import luji       from './biographies/wu/luji.js'
+import zhangwen   from './biographies/wu/zhangwen.js'
+import luotong    from './biographies/wu/luotong.js'
+import lumao      from './biographies/wu/lumao.js'
+import wucan      from './biographies/wu/wucan.js'
+import zhuju      from './biographies/wu/zhuju.js'
+import luxun      from './biographies/wu/luxun.js'
+import heqi       from './biographies/wu/heqi.js'
+import quancong   from './biographies/wu/quancong.js'
+import lvdai      from './biographies/wu/lvdai.js'
+import zhoufang   from './biographies/wu/zhoufang.js'
+import zhonglimu  from './biographies/wu/zhonglimu.js'
+import panjun     from './biographies/wu/panjun.js'
+import lukai      from './biographies/wu/lukai.js'
+import luyin      from './biographies/wu/luyin.js'
+
 
 export const biographyData = {
   wei: {
@@ -518,20 +592,80 @@ export const biographyData = {
         title: '吴主传第二',
         persons: [sunquan]
       },
-      // {
-      //   id: 'wu-2',
-      //   title: '周瑜鲁肃吕蒙传第九',
-      //   persons: [zhouyu, lusu, lvmeng]
-      // },
-      // {
-      //   id: 'wu-3',
-      //   title: '诸葛滕二孙濮阳传第十九',
-      //   persons: [tengyin]
-      // },
+      {
+        id: 'wu-2',
+        title: '三嗣主传第三',
+        persons: [sunliang, sunxiu, sunhao]
+      },
+      {
+        id: 'wu-3',
+        title: '刘繇太史慈士燮传第四',
+        persons: [liuyao, taishici, shixie]
+      },
       {
         id: 'wu-4',
         title: '吴范刘惇赵达传第十八',
         persons: [liudun]
+      },
+      {
+        id: 'wu-5',
+        title: '妃嫔传第五',
+        persons: [wufuren, xiefuren, xufuren, bufuren, wangfuren1, wangfuren2, panfuren, quanfuren, zhufuren, heji, tengfuren]
+      },
+      {
+        id: 'wu-6',
+        title: '宗室传第六',
+        persons: [sunjing, sunyu, sunjiao, sunhuan, sunben, sunlin, sunfu, sunyi, sunkuang, sunshao, sunhuan2]
+      },
+      {
+        id: 'wu-7',
+        title: '张顾诸葛步传第七',
+        persons: [zhangzhao, guyong, zhugejin, buzhi]
+      },
+      {
+        id: 'wu-8',
+        title: '张严程阚薛传第八',
+        persons: [zhanghong, yanjun, chengbing, kanze, xuezong]
+      },
+      {
+        id: 'wu-9',
+        title: '周瑜鲁肃吕蒙传第九',
+        persons: [zhouyu, lusu, lvmeng]
+      },
+      {
+        id: 'wu-10',
+        title: '程黄韩蒋周陈董甘凌徐潘丁传第十',
+        persons: [chengpu, huanggai, handang, jiangqin, zhoutai, chenwu, dongxi, ganning, lingtong, xusheng, panzhang, dingfeng]
+      },
+      {
+        id: 'wu-11',
+        title: '朱治朱然吕范朱桓传第十一',
+        persons: [zhuzhi, zhuran, lvfan, zhuhuan]
+      },
+      {
+        id: 'wu-12',
+        title: '虞陆张骆陆吾朱传第十二',
+        persons: [yufan, luji, zhangwen, luotong, lumao, wucan, zhuju]
+      },
+      {
+        id: 'wu-13',
+        title: '陆逊传第十三',
+        persons: [luxun]
+      },
+      {
+        id: 'wu-14',
+        title: '吴主五子传第十四',
+        persons: [sunden, sunlv, sunhe, sunba, sunfen]
+      },
+      {
+        id: 'wu-15',
+        title: '贺全吕周钟离传第十五',
+        persons: [heqi, quancong, lvdai, zhoufang, zhonglimu]
+      },
+      {
+        id: 'wu-16',
+        title: '潘浚陆凯传第十六',
+        persons: [panjun, lukai, luyin]
       }
     ]
   }

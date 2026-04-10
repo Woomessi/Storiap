@@ -1,0 +1,31 @@
+/**
+ * 贺齐传记
+ */
+export default {
+  id: 'wu-15-heqi',
+  name: '贺齐',
+  content: {
+    title: '贺齐传',
+    text: `
+      <p>贺齐字公苗，<a class="place-name wu" data-place="会稽" data-year="196年前" data-faction="neutral">会稽</a><a class="place-name wu" data-place="山阴" data-year="196年前" data-faction="neutral">山阴</a>人也。少为郡吏，守<a class="place-name wu" data-place="剡" data-year="196年前" data-faction="neutral">剡</a>长。县吏斯从轻侠为奸，齐欲治之。主簿谏曰："从，县大族，山越所附，今日治之，明日寇至。"齐闻大怒，便立斩众。从族党遂相纠合，众千余人，举兵攻县。齐率吏民，开城门突击，大破之，威震山越。后<a class="place-name wu" data-place="太末" data-year="196年前" data-faction="neutral">太末</a>、<a class="place-name wu" data-place="丰浦" data-year="196年前" data-faction="neutral">丰浦</a>民反，转守<a class="place-name wu" data-place="太末" data-year="196年前" data-faction="neutral">太末</a>长，诛恶养善，期用尽平。</p>
+
+      <p>建安元年，孙策临郡，察齐孝廉。时王朗奔<a class="place-name wu" data-place="东冶" data-year="196年" data-faction="neutral">东冶</a>，<a class="place-name wu" data-place="侯官" data-year="196年" data-faction="neutral">侯官</a>长商升为朗起兵。策遣<a class="place-name wu" data-place="永宁" data-year="196年" data-faction="neutral">永宁</a>长韩晏领南部都尉，将兵讨升，以齐为<a class="place-name wu" data-place="永宁" data-year="196年" data-faction="neutral">永宁</a>长。晏为升所败，齐又代晏领都尉事。升畏齐威名，遣使乞盟。齐因告喻，为陈祸福，升遂送上印绶，出舍求降。贼帅张雅、詹强等不愿升降，反共杀升，雅称无上将军，强称<a class="place-name wu" data-place="会稽" data-year="196年" data-faction="neutral">会稽</a>太守。贼盛兵少，未足以讨，齐住军息兵。雅与女婿何雄争势两乖，齐令越人因事交构。遂至疑隙，阻兵相图。齐乃进讨，一战大破雅，强党震惧，率众出降。</p>
+
+      <p><a class="place-name wu" data-place="侯官" data-year="196年" data-faction="wu">侯官</a>既平。而<a class="place-name wu" data-place="建安" data-year="203年" data-faction="wu">建安</a>、<a class="place-name wu" data-place="汉兴" data-year="203年" data-faction="wu">汉兴</a>、<a class="place-name wu" data-place="南平" data-year="203年" data-faction="wu">南平</a>复乱，齐进兵<a class="place-name wu" data-place="建安" data-year="203年" data-faction="wu">建安</a>，立都尉府，是岁八年也。郡发属县五千兵，各使本县长将之，皆受齐节度。贼洪明、洪进、苑御、吴免、华当等五人，率各万户，连屯<a class="place-name wu" data-place="汉兴" data-year="203年" data-faction="wu">汉兴</a>，吴五六千户别屯<a class="place-name wu" data-place="大潭" data-year="203年" data-faction="wu">大潭</a>。邹临六千户别屯<a class="place-name wu" data-place="盖竹" data-year="203年" data-faction="wu">盖竹</a>，大潭同出<a class="place-name wu" data-place="馀汗" data-year="203年" data-faction="wu">馀汗</a>。军讨<a class="place-name wu" data-place="汉兴" data-year="203年" data-faction="wu">汉兴</a>，经<a class="place-name wu" data-place="馀汗" data-year="203年" data-faction="wu">馀汗</a>。齐以为贼众兵少，深入无继，恐为所断，令<a class="place-name wu" data-place="松阳" data-year="203年" data-faction="wu">松阳</a>长丁蕃留备<a class="place-name wu" data-place="馀汗" data-year="203年" data-faction="wu">余汗</a>。蕃本与齐邻城，耻见部伍，辞不肯留。齐乃斩蕃，于是军中震栗。无不用命。遂分兵留备，进讨明等，连大破之。临陈斩明，其免、当、进、御皆降。转击<a class="place-name wu" data-place="盖竹" data-year="203年" data-faction="wu">盖竹</a>，军向<a class="place-name wu" data-place="大潭" data-year="203年" data-faction="wu">大潭</a>，三将又降。凡讨治斩首六千级，名帅尽擒。复立县邑，料出兵万人，拜为平东校尉。</p>
+
+      <p>十年，转讨<a class="place-name wu" data-place="上饶" data-year="205年" data-faction="wu">上饶</a>，分以为建平县。十三年，迁威武中郎将，讨<a class="place-name wu" data-place="丹杨" data-year="208年" data-faction="wu">丹阳</a><a class="place-name wu" data-place="黟" data-year="208年" data-faction="wu">黟</a>、<a class="place-name wu" data-place="歙" data-year="208年" data-faction="wu">歙</a>。时武强、叶乡、东阳、丰浦四乡先降，齐表言以叶乡为始新县。而<a class="place-name wu" data-place="歙" data-year="208年" data-faction="wu">歙</a>贼帅金奇万户屯安勒山，毛甘万户屯乌聊山，<a class="place-name wu" data-place="黟" data-year="208年" data-faction="wu">黟</a>帅陈仆，祖山等二万户屯林历山。林历山四面壁立，高数十丈，径路危狭，不容刀楯，贼临高下石，不可得攻。军住经日，将吏患之。齐身出周行，观视形便，阴募轻捷士，为作铁弋，密于隐险贼所不备处，以戈拓斩山为缘道，夜令潜上，乃多县布以援下人，得上百数人，四面流布，俱鸣鼓角，齐勒兵待之。贼夜闻鼓声四合，谓大军悉已得上，惊惧惑乱，不知所为，守路备险者，皆走还依众。大军因是得上，大破仆等，其余皆降，凡斩首七千。</p>
+
+      <p>齐复表分<a class="place-name wu" data-place="歙" data-year="208年" data-faction="wu">歙</a>为<a class="place-name wu" data-place="新定" data-year="208年" data-faction="wu">新定</a>；<a class="place-name wu" data-place="新都黎阳" data-year="208年" data-faction="wu">黎阳</a>、<a class="place-name wu" data-place="休阳" data-year="208年" data-faction="wu">休阳</a>。并<a class="place-name wu" data-place="黟" data-year="208年" data-faction="wu">黟</a>、<a class="place-name wu" data-place="歙" data-year="208年" data-faction="wu">歙</a>凡六县。权遂割为新都郡，齐为太守，立府于<a class="place-name wu" data-place="始新" data-year="208年" data-faction="wu">始新</a>，加偏将军。</p>
+
+      <p>十六年，<a class="place-name wu" data-place="吴郡" data-year="211年" data-faction="wu">吴郡</a><a class="place-name wu" data-place="余杭" data-year="211年" data-faction="wu">余杭</a>民郎稚合宗起贼，复数千人，齐出讨之。即复破稚，表言分<a class="place-name wu" data-place="余杭" data-year="211年" data-faction="wu">余杭</a>为临水县。被命诣所在，及当还郡，权出祖道，作乐舞象。赐齐軿车骏马，罢坐住驾，使齐就车。齐辞不敢，权使左右扶齐上车，令导吏卒兵骑，如在郡仪。权望之笑曰："人当努力，非积行累勤，此不可得。"去百余步乃旋。</p>
+
+      <p>十八年，<a class="place-name wu" data-place="豫章" data-year="213年" data-faction="wu">豫章</a>东部民彭材、李玉、王海等起为贼乱，众万余人。齐讨平之，诛其首恶，余皆降服。拣其精健为兵，次为县户。迁奋武将军。二十年，从权征<a class="place-name wu" data-place="合肥" data-year="215年" data-faction="wei">合肥</a>。时城中出战，徐盛被创失矛，齐引兵拒击，得盛所失。二十一年，<a class="place-name wu" data-place="鄱阳" data-year="216年" data-faction="wu">鄱阳</a>民尤突受曹公印绶，化民为贼，<a class="place-name wu" data-place="陵阳" data-year="216年" data-faction="wu">陵阳</a>、<a class="place-name wu" data-place="始安" data-year="216年" data-faction="wu">始安</a>、<a class="place-name wu" data-place="泾县" data-year="216年" data-faction="wu">泾县</a>皆与突相应。齐与陆逊讨破突，斩首数千，余党震服，<a class="place-name wu" data-place="丹杨" data-year="216年" data-faction="wu">丹杨</a>三县皆降，料得精兵八千人。拜安东将军，封山阴侯，出镇江上，督扶州以上至<a class="place-name wu" data-place="皖" data-year="216年" data-faction="wu">皖</a>。</p>
+
+      <p>黄武初，魏使曹休来伐。齐以道远后至，因住<a class="place-name wu" data-place="新市" data-year="222年" data-faction="wu">新市</a>为拒。会<a class="place-name wu" data-place="洞口" data-year="222年" data-faction="wu">洞口</a>诸军遭风流溺，所亡中分，将士失色，赖齐未济，偏军独全，诸将倚以为势。齐性奢绮，尤好军事，兵甲器械极为精好，所乘船雕刻丹镂，青盖绛襜，干橹戈矛，葩爪文画，弓弩矢箭，咸取上材，蒙冲斗舰之属，望之若山。</p>
+
+      <p>休等惮之，遂引军还。迁后将军，假节领<a class="place-name wu" data-place="徐州" data-year="222年" data-faction="wei">徐州</a>牧。</p>
+
+      <p>初，晋宗为<a class="place-name wu" data-place="戏口" data-year="225年前" data-faction="wu">戏口</a>将，以众叛如魏，还为<a class="place-name wu" data-place="蕲春" data-year="225年" data-faction="wei">蕲春</a>太守，图袭安乐，取其保质。权以为耻忿，因军初罢，六月盛夏、出其不意，诏齐督麋芳、鲜于丹等袭<a class="place-name wu" data-place="蕲春" data-year="225年" data-faction="wei">蕲春</a>，遂生虏宗。后四年卒，子达及弟景皆有令名，为佳将。</p>
+    `
+  }
+}
