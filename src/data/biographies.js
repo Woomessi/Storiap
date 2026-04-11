@@ -268,8 +268,14 @@ import sunfen     from './biographies/wu/sunfen.js'
 import zhouyu     from './biographies/wu/zhouyu.js'
 import lusu       from './biographies/wu/lusu.js'
 import lvmeng     from './biographies/wu/lvmeng.js'
+import zhugeke    from './biographies/wu/zhugeke.js'
 import tengyin    from './biographies/wu/tengyin.js'
+import sunzhun    from './biographies/wu/sunzhun.js'
+import sunchen    from './biographies/wu/sunchen.js'
+import puyangxing from './biographies/wu/puyangxing.js'
+import wufan      from './biographies/wu/wufan.js'
 import liudun     from './biographies/wu/liudun.js'
+import zhaoda     from './biographies/wu/zhaoda.js'
 import liuyao     from './biographies/wu/liuyao.js'
 import taishici   from './biographies/wu/taishici.js'
 import shixie     from './biographies/wu/shixie.js'
@@ -336,6 +342,14 @@ import zhonglimu  from './biographies/wu/zhonglimu.js'
 import panjun     from './biographies/wu/panjun.js'
 import lukai      from './biographies/wu/lukai.js'
 import luyin      from './biographies/wu/luyin.js'
+import shiyi      from './biographies/wu/shiyi.js'
+import huzong     from './biographies/wu/huzong.js'
+import xuxiang    from './biographies/wu/xuxiang.js'
+import wangfan    from './biographies/wu/wangfan.js'
+import louxuan    from './biographies/wu/louxuan.js'
+import heshao     from './biographies/wu/heshao.js'
+import weiyao     from './biographies/wu/weiyao.js'
+import huahe      from './biographies/wu/huahe.js'
 
 
 export const biographyData = {
@@ -602,11 +616,11 @@ export const biographyData = {
         title: '刘繇太史慈士燮传第四',
         persons: [liuyao, taishici, shixie]
       },
-      {
-        id: 'wu-4',
-        title: '吴范刘惇赵达传第十八',
-        persons: [liudun]
-      },
+      // {
+      //   id: 'wu-4',
+      //   title: '吴范刘惇赵达传第十八',
+      //   persons: [wufan, liudun, zhaoda]
+      // },
       {
         id: 'wu-5',
         title: '妃嫔传第五',
@@ -666,6 +680,26 @@ export const biographyData = {
         id: 'wu-16',
         title: '潘浚陆凯传第十六',
         persons: [panjun, lukai, luyin]
+      },
+      {
+        id: 'wu-17',
+        title: '是仪胡综传第十七',
+        persons: [shiyi, huzong, xuxiang]
+      },
+      {
+        id: 'wu-18',
+        title: '吴范刘惇赵达传第十八',
+        persons: [wufan, liudun, zhaoda]
+      },
+      {
+        id: 'wu-19',
+        title: '诸葛滕二孙濮阳传第十九',
+        persons: [zhugeke, tengyin, sunzhun, sunchen, puyangxing]
+      },
+      {
+        id: 'wu-20',
+        title: '王楼贺韦华传第二十',
+        persons: [wangfan, louxuan, heshao, weiyao, huahe]
       }
     ]
   }
