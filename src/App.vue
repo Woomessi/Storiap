@@ -34,12 +34,14 @@
       />
     </div>
   </div>
+  <VisitorStats />
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import MapView from './components/MapView.vue'
 import TextView from './components/TextView.vue'
+import VisitorStats from './components/VisitorStats.vue'
 import { biographyData } from './data/biographies.js'
 
 const selectedPlace = ref(null)
