@@ -85,7 +85,10 @@ const parseLocationsFromText = (htmlText) => {
     const placeName = el.dataset.place
     const year = el.dataset.year
     const faction = el.dataset.faction
-    
+
+    // 跳过标记为未亲历的地名（如对话中提及）
+    if (el.dataset.visit === 'false') return
+
     if (placeName && places[placeName]) {
       locations.push({
         name: placeName,
