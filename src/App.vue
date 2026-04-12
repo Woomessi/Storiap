@@ -30,6 +30,7 @@
         @place-click="handlePlaceClick"
         @person-selected="handlePersonSelected"
         @toggle-route="handleToggleRoute"
+        @go-home="selectedPlace = null"
       />
     </div>
   </div>
@@ -70,11 +71,13 @@ const handlePlaceSelected = (placeInfo) => {
 }
 
 const handlePersonSelected = (personInfo) => {
+  selectedPlace.value = null
   selectedPerson.value = personInfo.name
   biographyContent.value = personInfo.content
 }
 
 const handleToggleRoute = (show) => {
+  selectedPlace.value = null
   showRoute.value = show
 }
 

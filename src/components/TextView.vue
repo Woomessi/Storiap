@@ -190,7 +190,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['place-click', 'person-selected', 'toggle-route'])
+const emit = defineEmits(['place-click', 'person-selected', 'toggle-route', 'go-home'])
 
 // 状态管理
 const selectedBook = ref('')
@@ -225,6 +225,9 @@ const bookNames = {
 // 页面导航
 const goToHome = () => {
   currentPage.value = 'home'
+  showRoute.value = false
+  emit('toggle-route', false)
+  emit('go-home')
 }
 
 const goToReading = () => {
